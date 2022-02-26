@@ -101,11 +101,11 @@
       <h1>NovaDiscs</h1>
     </LinkTo>
   
-    <div class="links">
+    <!-- <div class="links"> -->
   
-      <LinkTo @route="scorecard" class="menu-contact">
+      <!-- <LinkTo @route="scorecard" class="menu-contact">
         Putting League Scorecard
-      </LinkTo>
+      </LinkTo> -->
   
       <!-- <LinkTo @route="about" class="menu-about">
         About
@@ -115,13 +115,13 @@
         Contact
       </LinkTo> -->
   
-    </div>
+    <!-- </div> -->
   </nav>
   
   */
   {
-    "id": "N75MUv+S",
-    "block": "[[[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n\\n  \"],[10,0],[14,0,\"links\"],[12],[1,\"\\n\\n    \"],[8,[39,0],[[24,0,\"menu-contact\"]],[[\"@route\"],[\"scorecard\"]],[[\"default\"],[[[[1,\"\\n      Putting League Scorecard\\n    \"]],[]]]]],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"menu-about\\\">\\n      About\\n    </LinkTo>\\n\\n    <LinkTo @route=\\\"contact\\\" class=\\\"menu-contact\\\">\\n      Contact\\n    </LinkTo> \"],[1,\"\\n\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
+    "id": "HX3u0hVH",
+    "block": "[[[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n\\n  \"],[3,\" <div class=\\\"links\\\"> \"],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n      Putting League Scorecard\\n    </LinkTo> \"],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"menu-about\\\">\\n      About\\n    </LinkTo>\\n\\n    <LinkTo @route=\\\"contact\\\" class=\\\"menu-contact\\\">\\n      Contact\\n    </LinkTo> \"],[1,\"\\n\\n  \"],[3,\" </div> \"],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
     "moduleName": "novadiscs/components/nav-bar.hbs",
     "isStrictMode": false
   });
@@ -141,15 +141,9 @@
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    <!-- {{sendmail}} -->
-  <!-- <sendmail /> -->
-  <!-- Sample HTML Form -->
-  <!-- <form method="post" action="sendmail.php">
-  <textarea name="message"></textarea>
-  <input type="submit">
-  </form> -->
-  
+    
   <body>
+  
     <label for="playerName">Player Name: </label>
     <input type="text" name="playerName" id="playerName" placeholder="Name"/>
   
@@ -204,44 +198,14 @@
     </tr>
   </table>
   
-  <!-- <html>
-  <body>
-  
-  <h2 style="color:green"> Get all marked checkboxes value </h2>
-  <h4> Select the programming language, you know </h4>
-  <tr>
-  <td> Java: <input type="checkbox" id="check1" name="pl" value="Java"> </td>
-  <td> PHP: <input type="checkbox" id="check2" name="pl" value="PHP"> </td>
-  </tr> <tr>
-  <td> Angular: <input type="checkbox" id="check3" name="pl" value="Angular"> </td>
-  <td> CSS: <input type="checkbox" id="check4" name="pl" value="CSS"> </td>
-  </tr> <tr>
-  <td> Python: <input type="checkbox" id="check5" name="pl" value="Python"> </td>
-  <td> Android: <input type="checkbox" id="check6" name="pl" value="Android"> </td> <br> <br>
-  <button id="btn">Submit</button> <br>
-  <h4 style="color:green" id="result"></h4>
-  
-  <script>
-  document.getElementById('btn').onclick = function() {
-    var markedCheckbox = document.getElementsByName('pl');
-    for (var checkbox of markedCheckbox) {
-      if (checkbox.checked)
-        document.body.append(checkbox.value + ' ');
-    }
-  }
-  </script>
-  
-  </body>
-  </html> -->
-  
-  
     <div class="Total">
       <span>Total Score: </span>
       <h4 style="color:green" id="result">0</h4>
     </div>
   
+  
     <button class="button" onClick="clearAll()" style="background: #db2b14;">Clear All</button>
-    <button class="button" onClick="submit()" >Submit</button>
+    <button class="button" onClick="submit()">Submit</button>
   
   </body>
   
@@ -268,115 +232,28 @@
       }
   
       function submit() {
-        var name = document.getElementById("playerName").value
+          var name = document.getElementById("playerName").value
           var total = document.getElementById("result").innerHTML
-          alert("Total score for " + name + ": " + total)
+  
+          if (name == "") {
+              alert("Name cannot be left blank.")
+          }
+          else if (confirm("Submit a score of " + total + " for " + name + "?")){
+              var today = new Date();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+              var yyyy = today.getFullYear();
+  
+              resp = "Total score for " + name + " on " + mm + "\\" + dd + "\\" + yyyy + ": " + total
+              window.location = "mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=" + resp;
+          }
       }
-  
-  
-    // function checkCheckbox() {
-    //   var attemptsFrom10Feet = document.getElementsByName("10feet");
-    //   print(attemptsFrom10Feet.value())
-      // var no = document.getElementById("myCheck2");
-      // if (yes.checked == true && no.checked == true){
-      //   return document.getElementById("error").innerHTML = "Please mark only one checkbox either Yes or No";
-      // }
-      // else if (yes.checked == true){
-      //   var y = document.getElementById("myCheck1").value;
-      //   return document.getElementById("result").innerHTML = y;
-      // }
-      // else if (no.checked == true){
-      //   var n = document.getElementById("myCheck2").value;
-      //   return document.getElementById("result").innerHTML = n;
-      // }
-      // else {
-      //   return document.getElementById("error").innerHTML = "*Please mark any of checkbox";
-      // }
-    // }
   </script>
-  <!-- <button onclick={{route-action 'refresh'}}>Refresh Score</button> -->
-  
-  <!-- <label for="total">Total Score</label> -->
-  
-  <!-- <EmberTable as |t|>
-    <t.head @columns={{Scoresheet.columns}} />
-  
-    <t.body @rows={{Scoresheet.rows}} />
-  </EmberTable> -->
-  
-  <!--
-  
-  <table>
-    <tr>
-      <th>Attempts</th>
-      <th>1st Attempt</th>
-      <th>2nd Attempt</th>
-      <th>3rd Attempt</th>
-      <th>4th Attempt</th>
-      <th>5th Attempt</th>
-    </tr>
-    <tr>
-      <td>10 Feet</td>
-      <td><input type="checkbox" id="10feet1attempt" name="10feet" value=1></td>
-      <td><input type="checkbox" id="10feet2attempt" name="10feet" value=1></td>
-      <td><input type="checkbox" id="10feet3attempt" name="10feet" value=1></td>
-      <td><input type="checkbox" id="10feet4attempt" name="10feet" value=1></td>
-      <td><input type="checkbox" id="10feet5attempt" name="10feet" value=2></td>
-    </tr>
-    <tr>
-      <td>15 Feet</td>
-      <td><input type="checkbox" id="15feet1attempt" name="15feet1attempt" value=2></td>
-      <td><input type="checkbox" id="15feet2attempt" name="15feet2attempt" value=2></td>
-      <td><input type="checkbox" id="15feet3attempt" name="15feet3attempt" value=2></td>
-      <td><input type="checkbox" id="15feet4attempt" name="15feet4attempt" value=2></td>
-      <td><input type="checkbox" id="15feet5attempt" name="15feet5attempt" value=4></td>
-    </tr>
-    <tr>
-      <td>20 Feet</td>
-      <td><input type="checkbox" id="20feet1attempt" name="20feet1attempt" value=3></td>
-      <td><input type="checkbox" id="20feet2attempt" name="20feet2attempt" value=3></td>
-      <td><input type="checkbox" id="20feet3attempt" name="20feet3attempt" value=3></td>
-      <td><input type="checkbox" id="20feet4attempt" name="20feet4attempt" value=3></td>
-      <td><input type="checkbox" id="20feet5attempt" name="20feet5attempt" value=6></td>
-    </tr>
-    <tr>
-      <td>25 Feet</td>
-      <td><input type="checkbox" id="25feet1attempt" name="25feet1attempt" value=4></td>
-      <td><input type="checkbox" id="25feet2attempt" name="25feet2attempt" value=4></td>
-      <td><input type="checkbox" id="25feet3attempt" name="25feet3attempt" value=4></td>
-      <td><input type="checkbox" id="25feet4attempt" name="25feet4attempt" value=4></td>
-      <td><input type="checkbox" id="25feet5attempt" name="25feet5attempt" value=8></td>
-    </tr>
-    <tr>
-      <td>30 Feet</td>
-      <td><input type="checkbox" id="30feet1attempt" name="30feet1attempt" value=5></td>
-      <td><input type="checkbox" id="30feet2attempt" name="30feet2attempt" value=5></td>
-      <td><input type="checkbox" id="30feet3attempt" name="30feet3attempt" value=5></td>
-      <td><input type="checkbox" id="30feet4attempt" name="30feet4attempt" value=5></td>
-      <td><input type="checkbox" id="30feet5attempt" name="30feet5attempt" value=10></td>
-    </tr>
-    <tr>
-      <td>Total Score</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table> -->
-  
-  <!-- var checkboxes = document.getElementsByName('10feet');
-  var sum = 0;
-  checkboxes.forEach(function(checkbox){
-    if (checkbox.checked) {
-      sum += checkbox.value;
-    }
-  }); -->
   
   */
   {
-    "id": "TBgQuYPc",
-    "block": "[[[3,\" {{sendmail}} \"],[1,\"\\n\"],[3,\" <sendmail /> \"],[1,\"\\n\"],[3,\" Sample HTML Form \"],[1,\"\\n\"],[3,\" <form method=\\\"post\\\" action=\\\"sendmail.php\\\">\\n<textarea name=\\\"message\\\"></textarea>\\n<input type=\\\"submit\\\">\\n</form> \"],[1,\"\\n\\n\"],[10,\"body\"],[12],[1,\"\\n  \"],[10,\"label\"],[14,\"for\",\"playerName\"],[12],[1,\"Player Name: \"],[13],[1,\"\\n  \"],[10,\"input\"],[14,3,\"playerName\"],[14,1,\"playerName\"],[14,\"placeholder\",\"Name\"],[14,4,\"text\"],[12],[13],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"puttingleaguescoresheet\"],[12],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Attempts\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 10 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 15 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 20 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 25 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 30 Feet \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"1st Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"2nd Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"3rd Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"4th Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"5th Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"6\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"8\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"10\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[3,\" <html>\\n<body>\\n\\n<h2 style=\\\"color:green\\\"> Get all marked checkboxes value </h2>\\n<h4> Select the programming language, you know </h4>\\n<tr>\\n<td> Java: <input type=\\\"checkbox\\\" id=\\\"check1\\\" name=\\\"pl\\\" value=\\\"Java\\\"> </td>\\n<td> PHP: <input type=\\\"checkbox\\\" id=\\\"check2\\\" name=\\\"pl\\\" value=\\\"PHP\\\"> </td>\\n</tr> <tr>\\n<td> Angular: <input type=\\\"checkbox\\\" id=\\\"check3\\\" name=\\\"pl\\\" value=\\\"Angular\\\"> </td>\\n<td> CSS: <input type=\\\"checkbox\\\" id=\\\"check4\\\" name=\\\"pl\\\" value=\\\"CSS\\\"> </td>\\n</tr> <tr>\\n<td> Python: <input type=\\\"checkbox\\\" id=\\\"check5\\\" name=\\\"pl\\\" value=\\\"Python\\\"> </td>\\n<td> Android: <input type=\\\"checkbox\\\" id=\\\"check6\\\" name=\\\"pl\\\" value=\\\"Android\\\"> </td> <br> <br>\\n<button id=\\\"btn\\\">Submit</button> <br>\\n<h4 style=\\\"color:green\\\" id=\\\"result\\\"></h4>\\n\\n<script>\\ndocument.getElementById('btn').onclick = function() {\\n  var markedCheckbox = document.getElementsByName('pl');\\n  for (var checkbox of markedCheckbox) {\\n    if (checkbox.checked)\\n      document.body.append(checkbox.value + ' ');\\n  }\\n}\\n</script>\\n\\n</body>\\n</html> \"],[1,\"\\n\\n\\n  \"],[10,0],[14,0,\"Total\"],[12],[1,\"\\n    \"],[10,1],[12],[1,\"Total Score: \"],[13],[1,\"\\n    \"],[10,\"h4\"],[14,5,\"color:green\"],[14,1,\"result\"],[12],[1,\"0\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"clearAll()\"],[14,5,\"background: #db2b14;\"],[12],[1,\"Clear All\"],[13],[1,\"\\n  \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"submit()\"],[12],[1,\"Submit\"],[13],[1,\"\\n\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[14,4,\"text/javascript\"],[12],[1,\"\\n    function totalIt() {\\n        var input = document.getElementsByName(\\\"attemptBox\\\");\\n        var total = 0;\\n        for (var i = 0; i < input.length; i++) {\\n          if (input[i].checked) {\\n            total += parseFloat(input[i].value);\\n          }\\n        }\\n        document.getElementById(\\\"result\\\").innerHTML = total;\\n    }\\n\\n    function clearAll() {\\n        if (confirm(\\\"Are you sure you want to clear all checkboxes?\\\")) {\\n            var boxes = document.getElementsByName(\\\"attemptBox\\\");\\n            for (var i = 0; i < boxes.length; i++) {\\n                boxes[i].checked = false;\\n            }\\n            document.getElementById(\\\"result\\\").innerHTML = 0;\\n        }\\n    }\\n\\n    function submit() {\\n      var name = document.getElementById(\\\"playerName\\\").value\\n        var total = document.getElementById(\\\"result\\\").innerHTML\\n        alert(\\\"Total score for \\\" + name + \\\": \\\" + total)\\n    }\\n\\n\\n  // function checkCheckbox() {\\n  //   var attemptsFrom10Feet = document.getElementsByName(\\\"10feet\\\");\\n  //   print(attemptsFrom10Feet.value())\\n    // var no = document.getElementById(\\\"myCheck2\\\");\\n    // if (yes.checked == true && no.checked == true){\\n    //   return document.getElementById(\\\"error\\\").innerHTML = \\\"Please mark only one checkbox either Yes or No\\\";\\n    // }\\n    // else if (yes.checked == true){\\n    //   var y = document.getElementById(\\\"myCheck1\\\").value;\\n    //   return document.getElementById(\\\"result\\\").innerHTML = y;\\n    // }\\n    // else if (no.checked == true){\\n    //   var n = document.getElementById(\\\"myCheck2\\\").value;\\n    //   return document.getElementById(\\\"result\\\").innerHTML = n;\\n    // }\\n    // else {\\n    //   return document.getElementById(\\\"error\\\").innerHTML = \\\"*Please mark any of checkbox\\\";\\n    // }\\n  // }\\n\"],[13],[1,\"\\n\"],[3,\" <button onclick={{route-action 'refresh'}}>Refresh Score</button> \"],[1,\"\\n\\n\"],[3,\" <label for=\\\"total\\\">Total Score</label> \"],[1,\"\\n\\n\"],[3,\" <EmberTable as |t|>\\n  <t.head @columns={{Scoresheet.columns}} />\\n\\n  <t.body @rows={{Scoresheet.rows}} />\\n</EmberTable> \"],[1,\"\\n\\n\"],[3,\"\\n\\n<table>\\n  <tr>\\n    <th>Attempts</th>\\n    <th>1st Attempt</th>\\n    <th>2nd Attempt</th>\\n    <th>3rd Attempt</th>\\n    <th>4th Attempt</th>\\n    <th>5th Attempt</th>\\n  </tr>\\n  <tr>\\n    <td>10 Feet</td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"10feet1attempt\\\" name=\\\"10feet\\\" value=1></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"10feet2attempt\\\" name=\\\"10feet\\\" value=1></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"10feet3attempt\\\" name=\\\"10feet\\\" value=1></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"10feet4attempt\\\" name=\\\"10feet\\\" value=1></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"10feet5attempt\\\" name=\\\"10feet\\\" value=2></td>\\n  </tr>\\n  <tr>\\n    <td>15 Feet</td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"15feet1attempt\\\" name=\\\"15feet1attempt\\\" value=2></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"15feet2attempt\\\" name=\\\"15feet2attempt\\\" value=2></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"15feet3attempt\\\" name=\\\"15feet3attempt\\\" value=2></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"15feet4attempt\\\" name=\\\"15feet4attempt\\\" value=2></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"15feet5attempt\\\" name=\\\"15feet5attempt\\\" value=4></td>\\n  </tr>\\n  <tr>\\n    <td>20 Feet</td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"20feet1attempt\\\" name=\\\"20feet1attempt\\\" value=3></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"20feet2attempt\\\" name=\\\"20feet2attempt\\\" value=3></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"20feet3attempt\\\" name=\\\"20feet3attempt\\\" value=3></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"20feet4attempt\\\" name=\\\"20feet4attempt\\\" value=3></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"20feet5attempt\\\" name=\\\"20feet5attempt\\\" value=6></td>\\n  </tr>\\n  <tr>\\n    <td>25 Feet</td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"25feet1attempt\\\" name=\\\"25feet1attempt\\\" value=4></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"25feet2attempt\\\" name=\\\"25feet2attempt\\\" value=4></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"25feet3attempt\\\" name=\\\"25feet3attempt\\\" value=4></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"25feet4attempt\\\" name=\\\"25feet4attempt\\\" value=4></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"25feet5attempt\\\" name=\\\"25feet5attempt\\\" value=8></td>\\n  </tr>\\n  <tr>\\n    <td>30 Feet</td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"30feet1attempt\\\" name=\\\"30feet1attempt\\\" value=5></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"30feet2attempt\\\" name=\\\"30feet2attempt\\\" value=5></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"30feet3attempt\\\" name=\\\"30feet3attempt\\\" value=5></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"30feet4attempt\\\" name=\\\"30feet4attempt\\\" value=5></td>\\n    <td><input type=\\\"checkbox\\\" id=\\\"30feet5attempt\\\" name=\\\"30feet5attempt\\\" value=10></td>\\n  </tr>\\n  <tr>\\n    <td>Total Score</td>\\n    <td></td>\\n    <td></td>\\n    <td></td>\\n    <td></td>\\n    <td></td>\\n  </tr>\\n</table> \"],[1,\"\\n\\n\"],[3,\" var checkboxes = document.getElementsByName('10feet');\\nvar sum = 0;\\ncheckboxes.forEach(function(checkbox){\\n  if (checkbox.checked) {\\n    sum += checkbox.value;\\n  }\\n}); \"],[1,\"\\n\"]],[],false,[]]",
+    "id": "NptMs9bq",
+    "block": "[[[1,\"\\n\"],[10,\"body\"],[12],[1,\"\\n\\n  \"],[10,\"label\"],[14,\"for\",\"playerName\"],[12],[1,\"Player Name: \"],[13],[1,\"\\n  \"],[10,\"input\"],[14,3,\"playerName\"],[14,1,\"playerName\"],[14,\"placeholder\",\"Name\"],[14,4,\"text\"],[12],[13],[1,\"\\n\\n\"],[10,\"table\"],[14,0,\"puttingleaguescoresheet\"],[12],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"th\"],[12],[1,\"Attempts\"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 10 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 15 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 20 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 25 Feet \"],[13],[1,\"\\n    \"],[10,\"th\"],[12],[1,\" 30 Feet \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"1st Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"2nd Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"3rd Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"4th Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tr\"],[12],[1,\"\\n    \"],[10,\"td\"],[12],[1,\"5th Attempt\"],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet1attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet2attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet3attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"6\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet4attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"8\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n    \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet5attempt\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"10\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n  \"],[10,0],[14,0,\"Total\"],[12],[1,\"\\n    \"],[10,1],[12],[1,\"Total Score: \"],[13],[1,\"\\n    \"],[10,\"h4\"],[14,5,\"color:green\"],[14,1,\"result\"],[12],[1,\"0\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n\\n  \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"clearAll()\"],[14,5,\"background: #db2b14;\"],[12],[1,\"Clear All\"],[13],[1,\"\\n  \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"submit()\"],[12],[1,\"Submit\"],[13],[1,\"\\n\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[14,4,\"text/javascript\"],[12],[1,\"\\n    function totalIt() {\\n        var input = document.getElementsByName(\\\"attemptBox\\\");\\n        var total = 0;\\n        for (var i = 0; i < input.length; i++) {\\n          if (input[i].checked) {\\n            total += parseFloat(input[i].value);\\n          }\\n        }\\n        document.getElementById(\\\"result\\\").innerHTML = total;\\n    }\\n\\n    function clearAll() {\\n        if (confirm(\\\"Are you sure you want to clear all checkboxes?\\\")) {\\n            var boxes = document.getElementsByName(\\\"attemptBox\\\");\\n            for (var i = 0; i < boxes.length; i++) {\\n                boxes[i].checked = false;\\n            }\\n            document.getElementById(\\\"result\\\").innerHTML = 0;\\n        }\\n    }\\n\\n    function submit() {\\n        var name = document.getElementById(\\\"playerName\\\").value\\n        var total = document.getElementById(\\\"result\\\").innerHTML\\n\\n        if (name == \\\"\\\") {\\n            alert(\\\"Name cannot be left blank.\\\")\\n        }\\n        else if (confirm(\\\"Submit a score of \\\" + total + \\\" for \\\" + name + \\\"?\\\")){\\n            var today = new Date();\\n            var dd = String(today.getDate()).padStart(2, '0');\\n            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!\\n            var yyyy = today.getFullYear();\\n\\n            resp = \\\"Total score for \\\" + name + \\\" on \\\" + mm + \\\"\\\\\\\\\\\" + dd + \\\"\\\\\\\\\\\" + yyyy + \\\": \\\" + total\\n            window.location = \\\"mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=\\\" + resp;\\n        }\\n    }\\n\"],[13],[1,\"\\n\"]],[],false,[]]",
     "moduleName": "novadiscs/components/puttingleaguescoresheet.hbs",
     "isStrictMode": false
   });
@@ -831,8 +708,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "VUT8WUSu",
-    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n  \"],[10,\"h2\"],[12],[1,\"NovaDiscs Putting League!\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"This site is currently a beta. Nothing is guarunteed. Leaving the site may cause you to lose any stored data.\"],[13],[1,\"\\n  \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"button\\\">About Us</LinkTo> \"],[1,\"\\n  \"],[8,[39,1],[[24,0,\"button\"]],[[\"@route\"],[\"scorecard\"]],[[\"default\"],[[[[1,\"Scorecard\"]],[]]]]],[1,\"\\n\"]],[]]]]],[1,\"\\n\"]],[],false,[\"jumbo\",\"link-to\"]]",
+    "id": "vsUsCyR1",
+    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n  \"],[10,\"h2\"],[12],[1,\"NovaDiscs Putting League!\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"This site is currently a beta. Nothing is guarunteed. Leaving the site may cause you to lose any results in the scorecard.\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"When submitting a scorecard you will be prompted to send an email. Please do not change the message body or 'To' field\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"If you are unable to submit a scorecard, take a screenshot and send it to Chris or email it to novadiscsscorecards@gmail.com\"],[13],[1,\"\\n  \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"button\\\">About Us</LinkTo> \"],[1,\"\\n  \"],[8,[39,1],[[24,0,\"button\"]],[[\"@route\"],[\"scorecard\"]],[[\"default\"],[[[[1,\"Scorecard\"]],[]]]]],[1,\"\\n\"]],[]]]]],[1,\"\\n\"]],[],false,[\"jumbo\",\"link-to\"]]",
     "moduleName": "novadiscs/templates/index.hbs",
     "isStrictMode": false
   });
@@ -936,7 +813,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+4e4f6844"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+6d83c181"});
           }
         
 //# sourceMappingURL=novadiscs.map

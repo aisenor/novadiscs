@@ -1,12 +1,6 @@
-<!-- {{sendmail}} -->
-<!-- <sendmail /> -->
-<!-- Sample HTML Form -->
-<!-- <form method="post" action="sendmail.php">
-<textarea name="message"></textarea>
-<input type="submit">
-</form> -->
 
 <body>
+
   <label for="playerName">Player Name: </label>
   <input type="text" name="playerName" id="playerName" placeholder="Name"/>
 
@@ -61,44 +55,14 @@
   </tr>
 </table>
 
-<!-- <html>
-<body>
-
-<h2 style="color:green"> Get all marked checkboxes value </h2>
-<h4> Select the programming language, you know </h4>
-<tr>
-<td> Java: <input type="checkbox" id="check1" name="pl" value="Java"> </td>
-<td> PHP: <input type="checkbox" id="check2" name="pl" value="PHP"> </td>
-</tr> <tr>
-<td> Angular: <input type="checkbox" id="check3" name="pl" value="Angular"> </td>
-<td> CSS: <input type="checkbox" id="check4" name="pl" value="CSS"> </td>
-</tr> <tr>
-<td> Python: <input type="checkbox" id="check5" name="pl" value="Python"> </td>
-<td> Android: <input type="checkbox" id="check6" name="pl" value="Android"> </td> <br> <br>
-<button id="btn">Submit</button> <br>
-<h4 style="color:green" id="result"></h4>
-
-<script>
-document.getElementById('btn').onclick = function() {
-  var markedCheckbox = document.getElementsByName('pl');
-  for (var checkbox of markedCheckbox) {
-    if (checkbox.checked)
-      document.body.append(checkbox.value + ' ');
-  }
-}
-</script>
-
-</body>
-</html> -->
-
-
   <div class="Total">
     <span>Total Score: </span>
     <h4 style="color:green" id="result">0</h4>
   </div>
 
+
   <button class="button" onClick="clearAll()" style="background: #db2b14;">Clear All</button>
-  <button class="button" onClick="submit()" >Submit</button>
+  <button class="button" onClick="submit()">Submit</button>
 
 </body>
 
@@ -125,107 +89,20 @@ document.getElementById('btn').onclick = function() {
     }
 
     function submit() {
-      var name = document.getElementById("playerName").value
+        var name = document.getElementById("playerName").value
         var total = document.getElementById("result").innerHTML
-        alert("Total score for " + name + ": " + total)
+
+        if (name == "") {
+            alert("Name cannot be left blank.")
+        }
+        else if (confirm("Submit a score of " + total + " for " + name + "?")){
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            resp = "Total score for " + name + " on " + mm + "\\" + dd + "\\" + yyyy + ": " + total
+            window.location = "mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=" + resp;
+        }
     }
-
-
-  // function checkCheckbox() {
-  //   var attemptsFrom10Feet = document.getElementsByName("10feet");
-  //   print(attemptsFrom10Feet.value())
-    // var no = document.getElementById("myCheck2");
-    // if (yes.checked == true && no.checked == true){
-    //   return document.getElementById("error").innerHTML = "Please mark only one checkbox either Yes or No";
-    // }
-    // else if (yes.checked == true){
-    //   var y = document.getElementById("myCheck1").value;
-    //   return document.getElementById("result").innerHTML = y;
-    // }
-    // else if (no.checked == true){
-    //   var n = document.getElementById("myCheck2").value;
-    //   return document.getElementById("result").innerHTML = n;
-    // }
-    // else {
-    //   return document.getElementById("error").innerHTML = "*Please mark any of checkbox";
-    // }
-  // }
 </script>
-<!-- <button onclick={{route-action 'refresh'}}>Refresh Score</button> -->
-
-<!-- <label for="total">Total Score</label> -->
-
-<!-- <EmberTable as |t|>
-  <t.head @columns={{Scoresheet.columns}} />
-
-  <t.body @rows={{Scoresheet.rows}} />
-</EmberTable> -->
-
-<!--
-
-<table>
-  <tr>
-    <th>Attempts</th>
-    <th>1st Attempt</th>
-    <th>2nd Attempt</th>
-    <th>3rd Attempt</th>
-    <th>4th Attempt</th>
-    <th>5th Attempt</th>
-  </tr>
-  <tr>
-    <td>10 Feet</td>
-    <td><input type="checkbox" id="10feet1attempt" name="10feet" value=1></td>
-    <td><input type="checkbox" id="10feet2attempt" name="10feet" value=1></td>
-    <td><input type="checkbox" id="10feet3attempt" name="10feet" value=1></td>
-    <td><input type="checkbox" id="10feet4attempt" name="10feet" value=1></td>
-    <td><input type="checkbox" id="10feet5attempt" name="10feet" value=2></td>
-  </tr>
-  <tr>
-    <td>15 Feet</td>
-    <td><input type="checkbox" id="15feet1attempt" name="15feet1attempt" value=2></td>
-    <td><input type="checkbox" id="15feet2attempt" name="15feet2attempt" value=2></td>
-    <td><input type="checkbox" id="15feet3attempt" name="15feet3attempt" value=2></td>
-    <td><input type="checkbox" id="15feet4attempt" name="15feet4attempt" value=2></td>
-    <td><input type="checkbox" id="15feet5attempt" name="15feet5attempt" value=4></td>
-  </tr>
-  <tr>
-    <td>20 Feet</td>
-    <td><input type="checkbox" id="20feet1attempt" name="20feet1attempt" value=3></td>
-    <td><input type="checkbox" id="20feet2attempt" name="20feet2attempt" value=3></td>
-    <td><input type="checkbox" id="20feet3attempt" name="20feet3attempt" value=3></td>
-    <td><input type="checkbox" id="20feet4attempt" name="20feet4attempt" value=3></td>
-    <td><input type="checkbox" id="20feet5attempt" name="20feet5attempt" value=6></td>
-  </tr>
-  <tr>
-    <td>25 Feet</td>
-    <td><input type="checkbox" id="25feet1attempt" name="25feet1attempt" value=4></td>
-    <td><input type="checkbox" id="25feet2attempt" name="25feet2attempt" value=4></td>
-    <td><input type="checkbox" id="25feet3attempt" name="25feet3attempt" value=4></td>
-    <td><input type="checkbox" id="25feet4attempt" name="25feet4attempt" value=4></td>
-    <td><input type="checkbox" id="25feet5attempt" name="25feet5attempt" value=8></td>
-  </tr>
-  <tr>
-    <td>30 Feet</td>
-    <td><input type="checkbox" id="30feet1attempt" name="30feet1attempt" value=5></td>
-    <td><input type="checkbox" id="30feet2attempt" name="30feet2attempt" value=5></td>
-    <td><input type="checkbox" id="30feet3attempt" name="30feet3attempt" value=5></td>
-    <td><input type="checkbox" id="30feet4attempt" name="30feet4attempt" value=5></td>
-    <td><input type="checkbox" id="30feet5attempt" name="30feet5attempt" value=10></td>
-  </tr>
-  <tr>
-    <td>Total Score</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table> -->
-
-<!-- var checkboxes = document.getElementsByName('10feet');
-var sum = 0;
-checkboxes.forEach(function(checkbox){
-  if (checkbox.checked) {
-    sum += checkbox.value;
-  }
-}); -->
