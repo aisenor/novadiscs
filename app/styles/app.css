@@ -466,3 +466,50 @@ p {
   height: 1px; width: 1px;
   margin: -1px; padding: 0; border: 0;
 }
+
+/* TABLE */
+input[type='checkbox'] {
+    /* -webkit-appearance:none; */
+    width:30px;
+    height:30px;
+    border-radius:5px;
+    border:2px solid #555;
+}
+
+input[type=text] {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.finalButtons {
+    width: 50%;
+    margin: auto;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.Total {
+  width: 90%;
+  margin: auto;
+  padding: 10px
+}
+
+/* input and its label */
+
+/* Div class Total has a span and h4 */
