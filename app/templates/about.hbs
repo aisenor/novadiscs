@@ -4,7 +4,21 @@
     The Super Rentals website is a delightful project created to explore Ember.
     By building a property rental site, we can simultaneously imagine traveling
     AND building Ember applications.
+    Form
   </p>
-  <LinkTo @route="contact" class="button">Contact Us</LinkTo>
+  <!-- <LinkTo @route="contact" class="button">Contact Us</LinkTo> -->
+
+  <form name="contact" netlify>
+    <p>
+      <label>Name <input type="text" name="name" /></label>
+    </p>
+    <p>
+      <label>Email <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+
 
 </Jumbo>
