@@ -521,10 +521,24 @@ input[type=text] {
   padding: 10px
 }
 
+@media only screen and (max-width:458px){
+  .finalButtons {
+    margin: 300px;
+  }
+}
+
 @media only screen and (max-width:620px) {
   .finalButtons {
     width:33%;
     margin: auto;
+  }
+  table{
+    width: 100%;
+  }
+  body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
