@@ -484,11 +484,16 @@ table {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   margin-top: 20px;
+
+  table-layout: fixed;
 }
 
 th, td {
   padding: 15px;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 td:nth-child(even)
@@ -521,10 +526,15 @@ input[type=text] {
   padding: 10px
 }
 
-@media only screen and (max-width:458px){
-  .finalButtons {
-    margin: 300px;
-  }
+@media only screen and (max-width: 480px) {
+    /* horizontal scrollbar for tables if mobile screen */
+    .puttingleaguescoresheet {
+        overflow-x: auto;
+        display: block;
+    }
+    th, td {
+      padding: 5px;
+    }
 }
 
 @media only screen and (max-width:620px) {
@@ -532,8 +542,8 @@ input[type=text] {
     width:33%;
     margin: auto;
   }
-  table{
-    width: 100%;
+  th, td {
+    padding: 10px;
   }
   body{
     width: 100%;
