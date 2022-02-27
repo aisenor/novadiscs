@@ -468,6 +468,28 @@ p {
 }
 
 /* TABLE */
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+td:nth-child(even)
+{
+  background-color: lightgrey;
+}
+
 input[type='checkbox'] {
     /* -webkit-appearance:none; */
     width:30px;
@@ -485,23 +507,6 @@ input[type=text] {
 .finalButtons {
     width: 50%;
     margin: auto;
-}
-
-table {
-  width: 90%;
-  border-collapse: collapse;
-  margin: auto;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-th, td {
-  padding: 15px;
-  text-align: left;
 }
 
 .Total {
