@@ -480,12 +480,13 @@ table {
   margin: auto;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
+  /* min-width: 400px; */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   margin-top: 20px;
 
   table-layout: fixed;
+  background-color: #F5F5F5;
 }
 
 th, td {
@@ -526,30 +527,33 @@ input[type=text] {
   padding: 10px
 }
 
-@media only screen and (max-width: 480px) {
-    /* horizontal scrollbar for tables if mobile screen */
-    .puttingleaguescoresheet {
-        overflow-x: auto;
-        display: block;
-    }
-    th, td {
-      padding: 5px;
-    }
+.sticky-col {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #F5F5F5;
 }
 
-@media only screen and (max-width:620px) {
+.first-col {
+  left: 0px;
+}
+@media only screen and (max-width:600px) {
   .finalButtons {
     width:33%;
     margin: auto;
   }
-  th, td {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+  /* th, td {
     padding: 10px;
   }
   body{
     width: 100%;
     margin: 0;
     padding: 0;
-  }
+  } */
 }
 
 /* input and its label */
