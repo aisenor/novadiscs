@@ -536,15 +536,25 @@ input[type=text] {
 .first-col {
   left: 0px;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+  text-align: center;
+}
+
 @media only screen and (max-width:600px) {
-  .finalButtons {
+  /* .finalButtons {
     width:33%;
     margin: auto;
-  }
+  } */
   table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+    scrollbar-color: blue;
 }
   /* th, td {
     padding: 10px;
