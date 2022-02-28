@@ -4,6 +4,11 @@
 <div class="Total">
   <label for="playerName">Player Name: </label>
   <input type="text" name="playerName" id="playerName" placeholder="Name"/>
+  <p></p>
+<!-- </div>
+<div class="Total"> -->
+  <label for="playerName">Player ID: </label>
+  <input type="number" name="playerID" id="playerID" placeholder="ID"/>
 </div>
 
 <div class="center">
@@ -96,19 +101,32 @@
 
     function submit() {
         var name = document.getElementById("playerName").value
+        var playerID = document.getElementById("playerID").value
+        var playerIDstring = "PlayerID: " + playerID
         var total = document.getElementById("result").innerHTML
 
-        if (name == "") {
-            alert("Name cannot be left blank.")
+        if (name == "" && playerID == "") {
+            alert("Name or ID is required.")
         }
-        else if (confirm("Submit a score of " + total + " for " + name + "?")){
+        // else if name and no ID
+        // else if ID and no name
+        else if (confirm("Submit a score of " + total + " for " + (name ? name : playerIDstring) + "?")){
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = today.getFullYear();
+            var date = "\'" + yyyy + "-" + mm + "-" + dd + "\'"
 
-            resp = "Total score for " + name + " on " + mm + "\\" + dd + "\\" + yyyy + ": " + total
-            window.location = "mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=" + resp;
+            if(playerID != ""){
+              resp = "Total score for " + (name ? name : playerIDstring) + " on " + date + ": " + total
+              sql = "INSERT INTO scores(player_id, date, score) VALUES (" + playerID + ", "+ date +", "+total+")"
+              window.location = "mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=" + resp + "%0D%0A...%0D%0A" + sql;
+            } else {
+              // No Player ID given
+              resp = "Total score for " + name + " on " + date + ": " + total
+              window.location = "mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=" + resp
+            }
+
         }
     }
 </script>
