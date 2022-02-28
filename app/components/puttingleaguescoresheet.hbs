@@ -119,7 +119,7 @@
 
             if(playerID != ""){
               resp = "Total score for " + (name ? name : playerIDstring) + " on " + date + ": " + total
-              sql = "INSERT INTO scores(player_id, date, score) VALUES (" + playerID + ", "+ date +", "+total+")"
+              sql = "INSERT INTO scores(player_id, date, score) VALUES (" + playerID + ", "+ date +", "+total+");"
               window.location = "mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=" + resp + "%0D%0A...%0D%0A" + sql;
             } else {
               // No Player ID given
