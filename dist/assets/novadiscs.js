@@ -954,8 +954,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "zjj56a8h",
-    "block": "[[[3,\" <Players /> \"],[1,\"\\n\\n\"],[10,\"h2\"],[12],[1,\"Registered Players\"],[13],[1,\"\\n\"],[10,2],[12],[1,\"\\n  If you don't see your name below talk to Chris to get a Player ID\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[14,4,\"text/javascript\"],[12],[1,\"\\n  players = [\\n    // {\\\"Player Name\\\": \\\"\\\", \\\"Player ID\\\": 0},\\n    {\\\"Player Name\\\": \\\"Chris Bourque\\\", \\\"Player ID\\\": 1},\\n    {\\\"Player Name\\\": \\\"Mandy Isenor\\\", \\\"Player ID\\\": 13},\\n    {\\\"Player Name\\\": \\\"Brandan Keho\\\", \\\"Player ID\\\": 2},\\n  ]\\n\"],[13],[1,\"\\n\\n\\n\"],[10,\"body\"],[12],[1,\"\\n  \"],[10,\"table\"],[14,0,\"puttingleaguescoresheet\"],[12],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"th\"],[12],[1,\"Player Name\"],[13],[1,\"\\n        \"],[10,\"th\"],[12],[1,\"Player ID\"],[13],[1,\"\\n      \"],[13],[1,\"\\n      \\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[]]",
+    "id": "B6QkO5mv",
+    "block": "[[[3,\" <Players /> \"],[1,\"\\n\\n\"],[10,\"h2\"],[12],[1,\"Registered Players\"],[13],[1,\"\\n\"],[10,2],[12],[1,\"\\n  If you don't see your name below talk to Chris to get a Player ID\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[14,4,\"text/javascript\"],[12],[1,\"\\n  players = [\\n    // {\\\"Player Name\\\": \\\"\\\", \\\"Player ID\\\": 0},\\n    {\\\"Player Name\\\": \\\"Chris Bourque\\\", \\\"Player ID\\\": 1},\\n    {\\\"Player Name\\\": \\\"Mandy Isenor\\\", \\\"Player ID\\\": 13},\\n  ]\\n\"],[13],[1,\"\\n\\n\\n\"],[10,\"body\"],[12],[1,\"\\n  \"],[10,\"table\"],[14,0,\"puttingleaguescoresheet\"],[12],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"th\"],[12],[1,\"Player Name\"],[13],[1,\"\\n        \"],[10,\"th\"],[12],[1,\"Player ID\"],[13],[1,\"\\n      \"],[13],[1,\"\\n\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[]]",
     "moduleName": "novadiscs/templates/registered_players.hbs",
     "isStrictMode": false
   });
@@ -1059,7 +1059,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+61c4ec26"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+9e32092d"});
           }
         
 //# sourceMappingURL=novadiscs.map
