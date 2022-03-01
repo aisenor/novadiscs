@@ -3,21 +3,51 @@
   If you don't see your name below talk to Chris to get a Player ID
 </p>
 
-<script type="text/javascript">
-  players = [
-    // {"Player Name": "", "Player ID": 0},
-    {"Player Name": "Chris Bourque", "Player ID": 1},
-    {"Player Name": "Mandy Isenor", "Player ID": 13},
-  ]
-</script>
-
-
 <body>
-  <table class="puttingleaguescoresheet">
+  <table id="playerTable" class="">
       <tr>
         <th>Player Name</th>
         <th>Player ID</th>
       </tr>
-
   </table>
 </body>
+
+
+<script type="text/javascript">
+
+    var players = [
+      // {"Player Name": "", "Player ID": 0},
+      {"Player Name": "Chris Bourque", "Player ID": 1},
+      {"Player Name": "Mandy Isenor", "Player ID": 2},
+      {'Player Name': 'Brandon Kehoe', 'Player ID':3},
+      {'Player Name': 'Ian McShane', 'Player ID':4},
+      {'Player Name': 'Brandon Crawford', 'Player ID':5},
+      {'Player Name': 'Barry Banks', 'Player ID':6},
+      {'Player Name': 'David Gillett', 'Player ID':7},
+      {'Player Name': 'Cameron Mason', 'Player ID':8},
+      {'Player Name': 'Dan Hendricken', 'Player ID':9},
+      {'Player Name': 'Matthew Brunet', 'Player ID':10},
+      {'Player Name': 'Jonathan Colborne', 'Player ID':11},
+      {'Player Name': 'Adam Berry', 'Player ID':12},
+      {'Player Name': 'Brandon Kehoe', 'Player ID':13},
+      {'Player Name': 'Heather Edgett', 'Player ID':14},
+      {'Player Name': 'Patrick Toole', 'Player ID':15},
+      {'Player Name': 'Brady Giles', 'Player ID':16},
+      {'Player Name': 'Tony Giles', 'Player ID':17}
+    ];
+
+    var columns = ["Player Name", "Player ID"];
+    var table = document.getElementById('playerTable');
+    var t = "";
+
+    for (var i = 0; i < players.length; i++)
+    {
+        var row = table.insertRow( -1 ); // -1 is insert as last
+        for( var j = 0; j < columns.length; j++ ){
+            var cell = row.insertCell( - 1 ); // -1 is insert as last
+            cell.className = columns[j]; //
+            cell.innerHTML = players[i][columns[j]]
+        }
+    }
+
+</script>
