@@ -11,4 +11,5 @@ Router.map(function () {
 
   this.route('players');
   // this.route('contact', { path: '/getting-in-touch' });
+  this.route('standings');
 });

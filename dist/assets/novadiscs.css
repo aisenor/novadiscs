@@ -129,24 +129,6 @@ p {
   bottom: 5px;
 }
 
-.rentals label span {
-  font-size: 140%;
-  margin: 50px auto 20px;
-  display: block;
-  text-align: center;
-  font-style: italic;
-}
-
-.rentals input {
-  padding: 11px;
-  font-size: 18px;
-  width: 500px;
-  margin: 20px auto 50px;
-  background-color: rgba(255, 255, 255, 0.75);
-  border: solid 1px lightgray;
-  display: block;
-}
-
 .menu input:focus {
   background-color: #f9f9f9;
   outline: none;
@@ -338,7 +320,7 @@ input[type=text], input[type=number] {
 
 .center {
   margin: auto;
-  width: 50%;
+  /* width: 50%; */
   /* border: 3px solid green; */
   padding: 10px;
   text-align: center;
@@ -414,11 +396,4 @@ input[type=text], input[type=number] {
 #main {
   transition: margin-left .5s;
   padding: 16px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-
 }
