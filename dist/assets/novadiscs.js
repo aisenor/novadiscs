@@ -767,7 +767,9 @@
   _exports.default = Router;
   Router.map(function () {
     this.route('scorecard');
-    this.route('players'); // this.route('contact', { path: '/getting-in-touch' });
+    this.route('players', {
+      path: '/getting-in-touch'
+    }); // this.route('contact', { path: '/getting-in-touch' });
   });
 });
 ;define("novadiscs/routes/scientists", ["exports", "@ember/routing/route"], function (_exports, _route) {
@@ -1059,7 +1061,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+d10212ae"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+9e32092d"});
           }
         
 //# sourceMappingURL=novadiscs.map
