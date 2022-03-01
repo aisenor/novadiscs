@@ -96,10 +96,23 @@
 
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
-    <nav class="menu">
+    
+  <nav class="menu">
     <LinkTo @route="index" class="menu-index">
       <h1>NovaDiscs</h1>
     </LinkTo>
+  
+    <LinkTo @route="scorecard" class="menu-contact" onclick="openNav()">
+      ☰ Menu
+    </LinkTo>
+    
+    <!-- <LinkTo @route="scorecard" class="menu-contact">
+      Scorecard
+    </LinkTo>
+  
+    <LinkTo @route="players" class="menu-contact">
+      Players
+    </LinkTo> -->
   
     <!-- <div class="links"> -->
   
@@ -118,11 +131,202 @@
     <!-- </div> -->
   </nav>
   
+  
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="scorecard">Scorecard</a>
+    <a href="players">Players</a>
+    <!-- <a href="#">Clients</a>
+    <a href="#">Contact</a> -->
+  </div>
+  
+  
+  <script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+  
   */
   {
-    "id": "HX3u0hVH",
-    "block": "[[[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n\\n  \"],[3,\" <div class=\\\"links\\\"> \"],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n      Putting League Scorecard\\n    </LinkTo> \"],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"menu-about\\\">\\n      About\\n    </LinkTo>\\n\\n    <LinkTo @route=\\\"contact\\\" class=\\\"menu-contact\\\">\\n      Contact\\n    </LinkTo> \"],[1,\"\\n\\n  \"],[3,\" </div> \"],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
+    "id": "FDkGlV/m",
+    "block": "[[[1,\"\\n\"],[10,\"nav\"],[14,0,\"menu\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n\\n  \"],[8,[39,0],[[24,0,\"menu-contact\"],[24,\"onclick\",\"openNav()\"]],[[\"@route\"],[\"scorecard\"]],[[\"default\"],[[[[1,\"\\n    ☰ Menu\\n  \"]],[]]]]],[1,\"\\n  \\n  \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n    Scorecard\\n  </LinkTo>\\n\\n  <LinkTo @route=\\\"players\\\" class=\\\"menu-contact\\\">\\n    Players\\n  </LinkTo> \"],[1,\"\\n\\n  \"],[3,\" <div class=\\\"links\\\"> \"],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n      Putting League Scorecard\\n    </LinkTo> \"],[1,\"\\n\\n    \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"menu-about\\\">\\n      About\\n    </LinkTo>\\n\\n    <LinkTo @route=\\\"contact\\\" class=\\\"menu-contact\\\">\\n      Contact\\n    </LinkTo> \"],[1,\"\\n\\n  \"],[3,\" </div> \"],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\"],[10,0],[14,1,\"mySidebar\"],[14,0,\"sidebar\"],[12],[1,\"\\n  \"],[10,3],[14,6,\"javascript:void(0)\"],[14,0,\"closebtn\"],[14,\"onclick\",\"closeNav()\"],[12],[1,\"×\"],[13],[1,\"\\n  \"],[10,3],[14,6,\"scorecard\"],[12],[1,\"Scorecard\"],[13],[1,\"\\n  \"],[10,3],[14,6,\"players\"],[12],[1,\"Players\"],[13],[1,\"\\n  \"],[3,\" <a href=\\\"#\\\">Clients</a>\\n  <a href=\\\"#\\\">Contact</a> \"],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction openNav() {\\n  document.getElementById(\\\"mySidebar\\\").style.width = \\\"250px\\\";\\n  document.getElementById(\\\"main\\\").style.marginLeft = \\\"250px\\\";\\n}\\n\\nfunction closeNav() {\\n  document.getElementById(\\\"mySidebar\\\").style.width = \\\"0\\\";\\n  document.getElementById(\\\"main\\\").style.marginLeft= \\\"0\\\";\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
     "moduleName": "novadiscs/components/nav-bar.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("novadiscs/components/nav-bar2", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+  body {margin:0;font-family:Arial}
+  
+  .topnav .menubuttons {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 28px 16px 25px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #20639B;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 450px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav .menubuttons {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 15px 16px 15px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  </style>
+  
+  
+  
+  <div class="topnav" id="myTopnav">
+    <LinkTo @route="index" class="menu-index">
+      <h1 style="font-style: italic;">NovaDiscs</h1>
+    </LinkTo>
+    <!-- <a href="#home" class="active">NovaDiscs</a> -->
+    <a class="menubuttons" href="/scorecard">Scorecard</a>
+    <a class="menubuttons" href="/registered_players">Players</a>
+  
+    <a href="javascript:void(0);" style="font-size:1.8em;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  
+  
+  
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+  
+  */
+  {
+    "id": "qOcDYdC/",
+    "block": "[[[1,\"\\n\"],[10,\"meta\"],[14,3,\"viewport\"],[14,\"content\",\"width=device-width, initial-scale=1\"],[12],[13],[1,\"\\n\"],[10,\"link\"],[14,\"rel\",\"stylesheet\"],[14,6,\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"],[12],[13],[1,\"\\n\\n\"],[10,\"style\"],[12],[1,\"\\nbody {margin:0;font-family:Arial}\\n\\n.topnav .menubuttons {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 28px 16px 25px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav {\\n  overflow: hidden;\\n  background-color: #20639B;\\n}\\n\\n.topnav a {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 14px 16px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav .icon {\\n  display: none;\\n}\\n\\n.dropdown {\\n  float: left;\\n  overflow: hidden;\\n}\\n\\n.dropdown .dropbtn {\\n  font-size: 17px;\\n  border: none;\\n  outline: none;\\n  color: white;\\n  padding: 14px 16px;\\n  background-color: inherit;\\n  font-family: inherit;\\n  margin: 0;\\n}\\n\\n.dropdown-content {\\n  display: none;\\n  position: absolute;\\n  background-color: #f9f9f9;\\n  min-width: 160px;\\n  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\\n  z-index: 1;\\n}\\n\\n.dropdown-content a {\\n  float: none;\\n  color: black;\\n  padding: 12px 16px;\\n  text-decoration: none;\\n  display: block;\\n  text-align: left;\\n}\\n\\n.dropdown-content a:hover {\\n  background-color: #ddd;\\n  color: black;\\n}\\n\\n.dropdown:hover .dropdown-content {\\n  display: block;\\n}\\n\\n@media screen and (max-width: 450px) {\\n  .topnav a:not(:first-child), .dropdown .dropbtn {\\n    display: none;\\n  }\\n  .topnav a.icon {\\n    float: right;\\n    display: block;\\n  }\\n  .topnav .menubuttons {\\n    float: left;\\n    display: block;\\n    color: #f2f2f2;\\n    text-align: center;\\n    padding: 15px 16px 15px;\\n    text-decoration: none;\\n    font-size: 17px;\\n  }\\n}\\n\\n@media screen and (max-width: 450px) {\\n  .topnav.responsive {position: relative;}\\n  .topnav.responsive .icon {\\n    position: absolute;\\n    right: 0;\\n    top: 0;\\n  }\\n  .topnav.responsive a {\\n    float: none;\\n    display: block;\\n    text-align: left;\\n  }\\n  .topnav.responsive .dropdown {float: none;}\\n  .topnav.responsive .dropdown-content {position: relative;}\\n  .topnav.responsive .dropdown .dropbtn {\\n    display: block;\\n    width: 100%;\\n    text-align: left;\\n  }\\n}\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,0],[14,0,\"topnav\"],[14,1,\"myTopnav\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[14,5,\"font-style: italic;\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[3,\" <a href=\\\"#home\\\" class=\\\"active\\\">NovaDiscs</a> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/scorecard\"],[12],[1,\"Scorecard\"],[13],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/registered_players\"],[12],[1,\"Players\"],[13],[1,\"\\n\\n  \"],[10,3],[14,6,\"javascript:void(0);\"],[14,5,\"font-size:1.8em;\"],[14,0,\"icon\"],[14,\"onclick\",\"myFunction()\"],[12],[1,\"☰\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction myFunction() {\\n  var x = document.getElementById(\\\"myTopnav\\\");\\n  if (x.className === \\\"topnav\\\") {\\n    x.className += \\\" responsive\\\";\\n  } else {\\n    x.className = \\\"topnav\\\";\\n  }\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
+    "moduleName": "novadiscs/components/nav-bar2.hbs",
     "isStrictMode": false
   });
 
@@ -563,7 +767,7 @@
   _exports.default = Router;
   Router.map(function () {
     this.route('scorecard');
-    this.route('about'); // this.route('contact', { path: '/getting-in-touch' });
+    this.route('registered_players'); // this.route('contact', { path: '/getting-in-touch' });
   });
 });
 ;define("novadiscs/routes/scientists", ["exports", "@ember/routing/route"], function (_exports, _route) {
@@ -696,8 +900,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "Gyfx6JJN",
-    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n  \"],[8,[39,0],null,null,null],[1,\"\\n  \"],[10,0],[14,0,\"body\"],[12],[1,\"\\n    \"],[46,[28,[37,2],null,null],null,null,null],[1,\"\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[\"nav-bar\",\"component\",\"-outlet\"]]",
+    "id": "pBGQ3JdH",
+    "block": "[[[10,0],[14,0,\"container\"],[12],[1,\"\\n  \"],[3,\" <NavBar /> \"],[1,\"\\n  \"],[8,[39,0],null,null,null],[1,\"\\n  \"],[10,0],[14,0,\"body\"],[12],[1,\"\\n    \"],[46,[28,[37,2],null,null],null,null,null],[1,\"\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[\"nav-bar2\",\"component\",\"-outlet\"]]",
     "moduleName": "novadiscs/templates/application.hbs",
     "isStrictMode": false
   });
@@ -735,6 +939,24 @@
     "id": "bl61u9Kb",
     "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n  \"],[10,\"h2\"],[12],[1,\"NovaDiscs Putting League!\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"This site is currently a beta. Nothing is guarunteed. Leaving the site may cause you to lose any results in the scorecard.\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"When submitting a scorecard you will be prompted to send an email. Please do not change the message body or 'To' field\"],[13],[1,\"\\n  \"],[10,2],[12],[1,\"If you are unable to submit a scorecard, take a screenshot and send it to Chris or email it to novadiscsscorecards@gmail.com\"],[13],[1,\"\\n  \"],[3,\" <LinkTo @route=\\\"about\\\" class=\\\"button\\\">About Us</LinkTo> \"],[1,\"\\n  \"],[8,[39,1],[[24,0,\"button\"],[24,5,\"background: #3CAEA3;\"]],[[\"@route\"],[\"scorecard\"]],[[\"default\"],[[[[1,\"Scorecard\"]],[]]]]],[1,\"\\n\"]],[]]]]],[1,\"\\n\"]],[],false,[\"jumbo\",\"link-to\"]]",
     "moduleName": "novadiscs/templates/index.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
+;define("novadiscs/templates/registered_players", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "zjj56a8h",
+    "block": "[[[3,\" <Players /> \"],[1,\"\\n\\n\"],[10,\"h2\"],[12],[1,\"Registered Players\"],[13],[1,\"\\n\"],[10,2],[12],[1,\"\\n  If you don't see your name below talk to Chris to get a Player ID\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[14,4,\"text/javascript\"],[12],[1,\"\\n  players = [\\n    // {\\\"Player Name\\\": \\\"\\\", \\\"Player ID\\\": 0},\\n    {\\\"Player Name\\\": \\\"Chris Bourque\\\", \\\"Player ID\\\": 1},\\n    {\\\"Player Name\\\": \\\"Mandy Isenor\\\", \\\"Player ID\\\": 13},\\n    {\\\"Player Name\\\": \\\"Brandan Keho\\\", \\\"Player ID\\\": 2},\\n  ]\\n\"],[13],[1,\"\\n\\n\\n\"],[10,\"body\"],[12],[1,\"\\n  \"],[10,\"table\"],[14,0,\"puttingleaguescoresheet\"],[12],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"th\"],[12],[1,\"Player Name\"],[13],[1,\"\\n        \"],[10,\"th\"],[12],[1,\"Player ID\"],[13],[1,\"\\n      \"],[13],[1,\"\\n      \\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\"]],[],false,[]]",
+    "moduleName": "novadiscs/templates/registered_players.hbs",
     "isStrictMode": false
   });
 
@@ -837,7 +1059,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+7843b164"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+61c4ec26"});
           }
         
 //# sourceMappingURL=novadiscs.map
