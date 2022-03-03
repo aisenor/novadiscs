@@ -27,7 +27,7 @@ button {
 
 body {
   background: #f3f3f3;
-  min-width: 330px;
+  min-width: 300px;
   /* TODO MAYBE GET RID OF MIN WIDTH IF I GET SMARTER */
 }
 
@@ -373,12 +373,12 @@ input[type=text], input[type=number] {
 
 @media only screen and (max-width:600px) {
 
-  table {
+  .puttingleaguescoresheet {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-    scrollbar-color: blue;
   }
+
   /* button {
     width: 100%
   } */
