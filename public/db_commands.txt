@@ -1,0 +1,22 @@
+/*TOP 3 SCORES - replace date */
+SELECT player_name, score
+FROM scores
+JOIN players ON players.id = player_id
+WHERE DATE="2022-03-02"
+ORDER BY score DESC
+LIMIT 3;
+
+/* Get the sum of everyones top 4 rounds */
+SELECT player_name, sum(score) AS "Best 4 Rounds"
+FROM (
+SELECT player_id, score
+FROM scores s
+WHERE (
+SELECT count(*)
+FROM scores sc
+WHERE sc.player_id = s.player_id AND sc.score >= s.score
+) <= 4
+) tmp
+JOIN players ON players.id = player_id
+GROUP BY player_id
+ORDER BY sum(score) DESC;
