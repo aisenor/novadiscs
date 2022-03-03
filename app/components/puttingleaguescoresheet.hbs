@@ -14,7 +14,7 @@
 <div class="center">
   <img src="../assets/images/scroll_right.png" alt="" style="max-width: 40px;">
 </div>
-<table class="puttingleaguescoresheet">
+<table class="scoreTable">
   <thead>
     <tr>
       <th class="sticky-col first-col"></th>
@@ -68,11 +68,11 @@
       </tr>
       <tr>
         <td class="sticky-col first-col"></td>
-        <td id="checkAll10" class="checkAll" onclick="checkAll(10)">Check<br>All</td>
-        <td id="checkAll15" class="checkAll" onclick="checkAll(15)">Check<br>All</td>
-        <td id="checkAll20" class="checkAll" onclick="checkAll(20)">Check<br>All</td>
-        <td id="checkAll25" class="checkAll" onclick="checkAll(25)">Check<br>All</td>
-        <td id="checkAll30" class="checkAll" onclick="checkAll(30)">Check<br>All</td>
+        <td id="checkAll10" name="checkAll" class="checkAll" onclick="checkAll(10)">Check<br>All</td>
+        <td id="checkAll15" name="checkAll" class="checkAll" onclick="checkAll(15)">Check<br>All</td>
+        <td id="checkAll20" name="checkAll" class="checkAll" onclick="checkAll(20)">Check<br>All</td>
+        <td id="checkAll25" name="checkAll" class="checkAll" onclick="checkAll(25)">Check<br>All</td>
+        <td id="checkAll30" name="checkAll" class="checkAll" onclick="checkAll(30)">Check<br>All</td>
       </tr>
   </tbody>
 
@@ -109,6 +109,12 @@
                 boxes[i].checked = false;
             }
             document.getElementById("result").innerHTML = 0;
+            // Reset all buttons to "check all"
+            var buttons = document.getElementsByName("checkAll");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].innerHTML = "Check<br>All";
+                buttons[i].style = ""
+            }
         }
     }
 

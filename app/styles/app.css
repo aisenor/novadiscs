@@ -358,8 +358,6 @@ input[type=text], input[type=number] {
 
 .center {
   margin: auto;
-  /* width: 50%; */
-  /* border: 3px solid green; */
   padding: 10px;
   text-align: center;
 }
@@ -371,64 +369,20 @@ input[type=text], input[type=number] {
   }
 }
 
+.playerTable, .standingsTable{
+  width: 60%
+}
+
 @media only screen and (max-width:600px) {
 
-  .puttingleaguescoresheet {
+  .scoreTable {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
   }
-
-  /* button {
-    width: 100%
-  } */
-  /* th, td {
-    padding: 10px;
+  .playerTable, .standingsTable{
+    width: 90%
   }
-  body{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  } */
-}
-
-/* input and its label */
-
-/* Div class Total has a span and h4 */
-
-/* SIDE BAR */
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }
 
 #main {
