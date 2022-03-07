@@ -1,29 +1,44 @@
 {{page-title "Standings"}}
 
+<style media="screen">
+#toc_container {
+  background: #f9f9f9 none repeat scroll 0 0;
+  /* border: 1px solid #aaa; */
+  display: table;
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: auto;
+}
+
+.toc_title {
+  font-weight: 700;
+  text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+  list-style: outside none none !important;
+}
+ul {
+  margin-left: 20px;
+}
+</style>
+
+
+  <div id="toc_container">
+  <p class="toc_title">Contents</p>
+  <li><a href="#top5">Top 5 Leaderboard</a></li>
+    <li><a href="#march9">Top 3 Rounds</a>
+    <ul>
+      <li><a href="#march2">March 2nd, 2022</a></li>
+      <li><a href="#march9">March 9th, 2022</a></li>
+    </ul>
+  </li>
+  </div>
+
+
 <body>
-  <table class="standingsTable">
-    <caption>Top 3 rounds of the day <br> March 2nd, 2022</caption>
-    <tr>
-      <th>Player Name</th>
-      <th>Round Score</th>
-    </tr>
-    <tr>
-      <td>Patrick Toole</td>
-      <td>81</td>
-    </tr>
-    <tr>
-      <td>Brandon Kehoe</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <td>Brandon Kehoe</td>
-      <td>77</td>
-    </tr>
-  </table>
-
-  <br>
-
-  <table class="standingsTable">
+  <table id="top5" class="standingsTable">
     <caption>Top 5 Players <br> Sum of best 4 rounds</caption>
     <tr>
       <th>Player Name</th>
@@ -50,4 +65,61 @@
       <td>187</td>
     </tr>
   </table>
+
+  <br>
+
+  <table id="march9" class="standingsTable">
+    <caption>Top 3 rounds of the day <br> March 9th, 2022</caption>
+    <tr>
+      <th>Player Name</th>
+      <th>Round Score</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table id="march2" class="standingsTable">
+    <caption>Top 3 rounds of the day <br> March 2nd, 2022</caption>
+    <tr>
+      <th>Player Name</th>
+      <th>Round Score</th>
+    </tr>
+    <tr>
+      <td>Patrick Toole</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>Brandon Kehoe</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>Brandon Kehoe</td>
+      <td>77</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <div class="center">
+    <button class="button" name="button" onclick="document.body.scrollTop = document.documentElement.scrollTop = 0;">Return to Top</button>
+  </div>
+
 </body>
+
+<script type="text/javascript">
+  function top(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+</script>
