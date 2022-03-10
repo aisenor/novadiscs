@@ -20,3 +20,10 @@ WHERE sc.player_id = s.player_id AND sc.score >= s.score
 JOIN players ON players.id = player_id
 GROUP BY player_id
 ORDER BY sum(score) DESC;
+
+
+/* Get all player names that attended a day */
+SELECT DISTINCT(player_name)
+FROM players
+JOIN scores ON scores.player_id = players.id
+WHERE scores.date = "2022-03-02";
