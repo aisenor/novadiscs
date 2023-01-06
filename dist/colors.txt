@@ -1,0 +1,3 @@
+blue #20639B
+green #3CAEA3
+red #Ed553B
