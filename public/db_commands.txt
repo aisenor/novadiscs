@@ -6,8 +6,8 @@ WHERE DATE="2022-03-02"
 ORDER BY score DESC
 LIMIT 3;
 
-/* Get the sum of everyones top 4 rounds */
-SELECT player_name, sum(score) AS "Best 4 Rounds"
+/* Get the sum of everyones top 4 days */
+SELECT player_name, sum(score) AS "Best 4 Days"
 FROM (
 SELECT player_id, score
 FROM scores s
