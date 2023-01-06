@@ -41,7 +41,6 @@
   }
 
   _exports.default = App;
-  (0, _emberLoadInitializers.default)(App, _environment.default.modulePrefix);
 });
 ;define("novadiscs/component-managers/glimmer", ["exports", "@glimmer/component/-private/ember-component-manager"], function (_exports, _emberComponentManager) {
   "use strict";
@@ -767,8 +766,7 @@
   _exports.default = Router;
   Router.map(function () {
     this.route('scorecard');
-    this.route('players'); // this.route('contact', { path: '/getting-in-touch' });
-
+    this.route('players');
     this.route('standings');
   });
 });
@@ -1092,7 +1090,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+62357d28"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+4e1abba4"});
           }
         
 //# sourceMappingURL=novadiscs.map
