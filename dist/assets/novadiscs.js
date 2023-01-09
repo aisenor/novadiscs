@@ -205,7 +205,7 @@
     margin: 0;
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 812px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
@@ -228,7 +228,7 @@
     }
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 812px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -263,9 +263,10 @@
     <LinkTo @route="players" class="menu-contact">
       Players
     </LinkTo> -->
-    <a class="menubuttons" href="/scorecard">Scorecard</a>
+    <a class="menubuttons" href="/scorecard">Putting League Scorecard</a>
     <!-- <a class="menubuttons" href="/players">Players</a> -->
-    <a class="menubuttons" href="/standings">Standings</a>
+    <a class="menubuttons" href="/standings">2023 Putting League Standings</a>
+    <a class="menubuttons" href="/stamps">Custom Stamps</a>
   
     <a href="javascript:void(0);" style="font-size:1.8em;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
@@ -285,8 +286,8 @@
   
   */
   {
-    "id": "Iqm4hXrp",
-    "block": "[[[1,\"\\n\"],[10,\"meta\"],[14,3,\"viewport\"],[14,\"content\",\"width=device-width, initial-scale=1\"],[12],[13],[1,\"\\n\"],[10,\"link\"],[14,\"rel\",\"stylesheet\"],[14,6,\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"],[12],[13],[1,\"\\n\\n\"],[10,\"style\"],[12],[1,\"\\nbody {margin:0;font-family:Arial}\\n\\n.topnav .menubuttons {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 28px 16px 25px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav {\\n  overflow: hidden;\\n  background-color: #20639B;\\n}\\n\\n.topnav a {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 14px 16px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav .icon {\\n  display: none;\\n}\\n\\n.dropdown {\\n  float: left;\\n  overflow: hidden;\\n}\\n\\n.dropdown .dropbtn {\\n  font-size: 17px;\\n  border: none;\\n  outline: none;\\n  color: white;\\n  padding: 14px 16px;\\n  background-color: inherit;\\n  font-family: inherit;\\n  margin: 0;\\n}\\n\\n@media screen and (max-width: 480px) {\\n  .topnav a:not(:first-child), .dropdown .dropbtn {\\n    display: none;\\n  }\\n  .topnav a.icon {\\n    float: right;\\n    display: block;\\n  }\\n  .topnav .menubuttons {\\n    float: left;\\n    display: block;\\n    color: #f2f2f2;\\n    text-align: center;\\n    padding: 15px 16px 15px;\\n    text-decoration: none;\\n    font-size: 17px;\\n  }\\n  .finalButtons {\\n      width: 66%;\\n      margin: auto;\\n  }\\n}\\n\\n@media screen and (max-width: 480px) {\\n  .topnav.responsive {position: relative;}\\n  .topnav.responsive .icon {\\n    position: absolute;\\n    right: 0;\\n    top: 0;\\n  }\\n  .topnav.responsive a {\\n    float: none;\\n    display: block;\\n    text-align: left;\\n  }\\n  .topnav.responsive .dropdown {float: none;}\\n  .topnav.responsive .dropdown .dropbtn {\\n    display: block;\\n    width: 100%;\\n    text-align: left;\\n  }\\n}\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,0],[14,0,\"topnav\"],[14,1,\"myTopnav\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[14,5,\"font-style: italic;\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[3,\" <a href=\\\"#home\\\" class=\\\"active\\\">NovaDiscs</a> \"],[1,\"\\n  \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n    Scorecard\\n  </LinkTo>\\n\\n  <LinkTo @route=\\\"players\\\" class=\\\"menu-contact\\\">\\n    Players\\n  </LinkTo> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/scorecard\"],[12],[1,\"Scorecard\"],[13],[1,\"\\n  \"],[3,\" <a class=\\\"menubuttons\\\" href=\\\"/players\\\">Players</a> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/standings\"],[12],[1,\"Standings\"],[13],[1,\"\\n\\n  \"],[10,3],[14,6,\"javascript:void(0);\"],[14,5,\"font-size:1.8em;\"],[14,0,\"icon\"],[14,\"onclick\",\"myFunction()\"],[12],[1,\"☰\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction myFunction() {\\n  var x = document.getElementById(\\\"myTopnav\\\");\\n  if (x.className === \\\"topnav\\\") {\\n    x.className += \\\" responsive\\\";\\n  } else {\\n    x.className = \\\"topnav\\\";\\n  }\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
+    "id": "VrZzpK8g",
+    "block": "[[[1,\"\\n\"],[10,\"meta\"],[14,3,\"viewport\"],[14,\"content\",\"width=device-width, initial-scale=1\"],[12],[13],[1,\"\\n\"],[10,\"link\"],[14,\"rel\",\"stylesheet\"],[14,6,\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"],[12],[13],[1,\"\\n\\n\"],[10,\"style\"],[12],[1,\"\\nbody {margin:0;font-family:Arial}\\n\\n.topnav .menubuttons {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 28px 16px 25px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav {\\n  overflow: hidden;\\n  background-color: #20639B;\\n}\\n\\n.topnav a {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 14px 16px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav .icon {\\n  display: none;\\n}\\n\\n.dropdown {\\n  float: left;\\n  overflow: hidden;\\n}\\n\\n.dropdown .dropbtn {\\n  font-size: 17px;\\n  border: none;\\n  outline: none;\\n  color: white;\\n  padding: 14px 16px;\\n  background-color: inherit;\\n  font-family: inherit;\\n  margin: 0;\\n}\\n\\n@media screen and (max-width: 812px) {\\n  .topnav a:not(:first-child), .dropdown .dropbtn {\\n    display: none;\\n  }\\n  .topnav a.icon {\\n    float: right;\\n    display: block;\\n  }\\n  .topnav .menubuttons {\\n    float: left;\\n    display: block;\\n    color: #f2f2f2;\\n    text-align: center;\\n    padding: 15px 16px 15px;\\n    text-decoration: none;\\n    font-size: 17px;\\n  }\\n  .finalButtons {\\n      width: 66%;\\n      margin: auto;\\n  }\\n}\\n\\n@media screen and (max-width: 812px) {\\n  .topnav.responsive {position: relative;}\\n  .topnav.responsive .icon {\\n    position: absolute;\\n    right: 0;\\n    top: 0;\\n  }\\n  .topnav.responsive a {\\n    float: none;\\n    display: block;\\n    text-align: left;\\n  }\\n  .topnav.responsive .dropdown {float: none;}\\n  .topnav.responsive .dropdown .dropbtn {\\n    display: block;\\n    width: 100%;\\n    text-align: left;\\n  }\\n}\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,0],[14,0,\"topnav\"],[14,1,\"myTopnav\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[14,5,\"font-style: italic;\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[3,\" <a href=\\\"#home\\\" class=\\\"active\\\">NovaDiscs</a> \"],[1,\"\\n  \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n    Scorecard\\n  </LinkTo>\\n\\n  <LinkTo @route=\\\"players\\\" class=\\\"menu-contact\\\">\\n    Players\\n  </LinkTo> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/scorecard\"],[12],[1,\"Putting League Scorecard\"],[13],[1,\"\\n  \"],[3,\" <a class=\\\"menubuttons\\\" href=\\\"/players\\\">Players</a> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/standings\"],[12],[1,\"2023 Putting League Standings\"],[13],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/stamps\"],[12],[1,\"Custom Stamps\"],[13],[1,\"\\n\\n  \"],[10,3],[14,6,\"javascript:void(0);\"],[14,5,\"font-size:1.8em;\"],[14,0,\"icon\"],[14,\"onclick\",\"myFunction()\"],[12],[1,\"☰\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction myFunction() {\\n  var x = document.getElementById(\\\"myTopnav\\\");\\n  if (x.className === \\\"topnav\\\") {\\n    x.className += \\\" responsive\\\";\\n  } else {\\n    x.className = \\\"topnav\\\";\\n  }\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
     "moduleName": "novadiscs/components/nav-bar2.hbs",
     "isStrictMode": false
   });
@@ -482,6 +483,180 @@
     "id": "amP/S0Xv",
     "block": "[[[1,\"\\n\"],[10,\"body\"],[12],[1,\"\\n\\n\"],[10,0],[14,0,\"Total\"],[14,5,\"word-spacing: 20px;\"],[12],[1,\"\\n  \"],[10,\"label\"],[14,\"for\",\"playerName\"],[14,5,\"font-weight: bold; word-spacing: normal;\"],[12],[1,\"Player Name: \"],[13],[1,\"\\n  \"],[10,\"input\"],[14,3,\"playerName\"],[14,1,\"playerName\"],[14,\"placeholder\",\"Name\"],[14,4,\"text\"],[12],[13],[1,\"\\n  OR\\n\\n  \"],[10,\"label\"],[14,\"for\",\"playerID\"],[14,5,\"font-weight: bold; word-spacing: normal;\"],[12],[1,\"PDGA Number: \"],[13],[1,\"\\n  \"],[10,\"input\"],[14,3,\"playerID\"],[14,1,\"playerID\"],[14,\"placeholder\",\"PDGA Number\"],[14,4,\"number\"],[12],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[10,0],[14,0,\"center\"],[12],[1,\"\\n  \"],[10,\"img\"],[14,\"src\",\"../assets/images/scroll_right.png\"],[14,\"alt\",\"\"],[14,5,\"max-width: 40px;\"],[12],[13],[1,\"\\n\"],[13],[1,\"\\n\"],[10,\"table\"],[14,0,\"scoreTable\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"tr\"],[12],[1,\"\\n      \"],[10,\"th\"],[14,0,\"sticky-col first-col\"],[12],[13],[1,\"\\n      \"],[10,\"th\"],[12],[1,\" Standard Basket 20' \"],[13],[1,\"\\n      \"],[10,\"th\"],[12],[1,\" Standard Basket 25' \"],[13],[1,\"\\n      \"],[10,\"th\"],[12],[1,\" Standard Basket 33' \"],[13],[1,\"\\n      \"],[10,\"th\"],[12],[1,\" Marksman Basket 25' \"],[13],[1,\"\\n      \"],[10,\"th\"],[12],[1,\" Marksman Basket 33' \"],[13],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,\"tbody\"],[12],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"sticky-col first-col\"],[12],[1,\"1st Putt\"],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"sticky-col first-col\"],[12],[1,\"2nd Putt\"],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"sticky-col first-col\"],[12],[1,\"3rd Putt\"],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"sticky-col first-col\"],[12],[1,\"4th Putt\"],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"sticky-col first-col\"],[12],[1,\"5th Putt\"],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"10feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"1\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"15feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"2\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"20feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"3\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"25feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"4\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n        \"],[10,\"td\"],[12],[10,\"input\"],[14,1,\"30feet\"],[14,3,\"attemptBox\"],[14,\"onclick\",\"totalIt()\"],[14,2,\"5\"],[14,4,\"checkbox\"],[12],[13],[13],[1,\"\\n      \"],[13],[1,\"\\n      \"],[10,\"tr\"],[12],[1,\"\\n        \"],[10,\"td\"],[14,0,\"sticky-col first-col\"],[12],[13],[1,\"\\n        \"],[10,\"td\"],[14,1,\"checkAll10\"],[14,3,\"checkAll\"],[14,0,\"checkAll\"],[14,\"onclick\",\"checkAll(10)\"],[12],[1,\"Check\"],[10,\"br\"],[12],[13],[1,\"All\"],[13],[1,\"\\n        \"],[10,\"td\"],[14,1,\"checkAll15\"],[14,3,\"checkAll\"],[14,0,\"checkAll\"],[14,\"onclick\",\"checkAll(15)\"],[12],[1,\"Check\"],[10,\"br\"],[12],[13],[1,\"All\"],[13],[1,\"\\n        \"],[10,\"td\"],[14,1,\"checkAll20\"],[14,3,\"checkAll\"],[14,0,\"checkAll\"],[14,\"onclick\",\"checkAll(20)\"],[12],[1,\"Check\"],[10,\"br\"],[12],[13],[1,\"All\"],[13],[1,\"\\n        \"],[10,\"td\"],[14,1,\"checkAll25\"],[14,3,\"checkAll\"],[14,0,\"checkAll\"],[14,\"onclick\",\"checkAll(25)\"],[12],[1,\"Check\"],[10,\"br\"],[12],[13],[1,\"All\"],[13],[1,\"\\n        \"],[10,\"td\"],[14,1,\"checkAll30\"],[14,3,\"checkAll\"],[14,0,\"checkAll\"],[14,\"onclick\",\"checkAll(30)\"],[12],[1,\"Check\"],[10,\"br\"],[12],[13],[1,\"All\"],[13],[1,\"\\n      \"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n\"],[13],[1,\"\\n\\n  \"],[10,0],[14,0,\"Total\"],[12],[1,\"\\n    \"],[10,1],[12],[1,\"Total Score: \"],[13],[1,\"\\n    \"],[10,\"h4\"],[14,5,\"color:green\"],[14,1,\"result\"],[12],[1,\"0\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n  \"],[10,0],[14,0,\"finalButtons center\"],[12],[1,\"\\n    \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"clearAll()\"],[14,5,\"background: #Ed553B; margin-bottom: 10px;\"],[14,4,\"button\"],[12],[1,\"Clear All\"],[13],[1,\"\\n    \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"submit()\"],[14,5,\"background: #3CAEA3;\"],[14,4,\"button\"],[12],[1,\"Submit\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[14,4,\"text/javascript\"],[12],[1,\"\\n    function totalIt() {\\n        var input = document.getElementsByName(\\\"attemptBox\\\");\\n        var total = 0;\\n        for (var i = 0; i < input.length; i++) {\\n          if (input[i].checked) {\\n            total += parseFloat(input[i].value);\\n          }\\n        }\\n        document.getElementById(\\\"result\\\").innerHTML = total;\\n    }\\n\\n    function clearAll() {\\n        if (confirm(\\\"Are you sure you want to clear all checkboxes?\\\")) {\\n            var boxes = document.getElementsByName(\\\"attemptBox\\\");\\n            for (var i = 0; i < boxes.length; i++) {\\n                boxes[i].checked = false;\\n            }\\n            document.getElementById(\\\"result\\\").innerHTML = 0;\\n            // Reset all buttons to \\\"check all\\\"\\n            var buttons = document.getElementsByName(\\\"checkAll\\\");\\n            for (var i = 0; i < buttons.length; i++) {\\n                buttons[i].innerHTML = \\\"Check<br>All\\\";\\n                buttons[i].style = \\\"\\\"\\n            }\\n        }\\n    }\\n\\n    function checkAll(basket) {\\n        var button = document.getElementById(\\\"checkAll\\\" + basket);\\n        if (button.innerHTML == \\\"Check<br>All\\\"){\\n            button.innerHTML = \\\"Uncheck<br>All\\\";\\n            button.style = \\\"color: #Ed553B;\\\"\\n            boxes = document.querySelectorAll(\\\"input[id='\\\" + basket + \\\"feet']\\\");\\n            for(var i=0; i<boxes.length; i++){\\n                boxes[i].checked = true;\\n            }\\n        } else {\\n            button.innerHTML = \\\"Check<br>All\\\";\\n            button.style = \\\"\\\"\\n            boxes = document.querySelectorAll(\\\"input[id='\\\" + basket + \\\"feet']\\\");\\n            for(var i=0; i<boxes.length; i++){\\n                boxes[i].checked = false;\\n            }\\n        }\\n        totalIt()\\n    }\\n\\n    function submit() {\\n        var name = document.getElementById(\\\"playerName\\\").value\\n        var playerID = document.getElementById(\\\"playerID\\\").value\\n        var playerIDstring = \\\"PlayerID: \\\" + playerID\\n        var total = document.getElementById(\\\"result\\\").innerHTML\\n\\n        if (name == \\\"\\\" && playerID == \\\"\\\") {\\n            alert(\\\"Name or ID is required.\\\")\\n        }\\n        // else if name and no ID\\n        // else if ID and no name\\n        else if (confirm(\\\"Submit a score of \\\" + total + \\\" for \\\" + (name ? name : playerIDstring) + \\\"?\\\")){\\n            var today = new Date();\\n            var dd = String(today.getDate()).padStart(2, '0');\\n            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!\\n            var yyyy = today.getFullYear();\\n            var date = \\\"\\\\'\\\" + yyyy + \\\"-\\\" + mm + \\\"-\\\" + dd + \\\"\\\\'\\\"\\n\\n            if(playerID != \\\"\\\"){\\n              resp = \\\"Total score for \\\" + (name ? name : playerIDstring) + \\\" on \\\" + date + \\\": \\\" + total\\n              sql = \\\"INSERT INTO scores(player_id, date, score) VALUES (\\\" + playerID + \\\", \\\"+ date +\\\", \\\"+total+\\\");\\\"\\n              window.location = \\\"mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=\\\" + resp + \\\"%0D%0A...%0D%0A\\\" + sql;\\n            } else {\\n              // No Player ID given\\n              resp = \\\"Total score for \\\" + name + \\\" on \\\" + date + \\\": \\\" + total\\n              window.location = \\\"mailto:novadiscsscorecards@gmail.com?subject=Putting League Results&body=\\\" + resp\\n            }\\n\\n        }\\n    }\\n\"],[13],[1,\"\\n\"]],[],false,[]]",
     "moduleName": "novadiscs/components/puttingleaguescoresheet.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("novadiscs/components/stamps", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    
+  */
+  {
+    "id": "hNZ4Rwgh",
+    "block": "[[],[],false,[]]",
+    "moduleName": "novadiscs/components/stamps.hbs",
+    "isStrictMode": false
+  });
+
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, (0, _templateOnly.default)());
+
+  _exports.default = _default;
+});
+;define("novadiscs/components/stamps_form", ["exports", "@ember/component", "@ember/template-factory", "@ember/component/template-only"], function (_exports, _component, _templateFactory, _templateOnly) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@ember/component/template-only"eaimeta@70e063a35619d71f
+
+  const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
+  /*
+    
+  <style media="screen">
+    label {
+      font-weight: bold;
+      word-spacing: normal;
+      padding-right:10px;
+    }
+  </style>
+  
+  <body>
+  <table>
+    <thead>
+      <tr>
+        <th class="center">Stamp Order Form - Basic Info</th>
+      </tr>
+    </thead>
+    <div class="center" style="word-spacing: 20px;">
+      <label for="fullName">Full Name: </label>
+      <input type="text" id="fullName" placeholder="Name"/>
+    <br>
+      <label for="PDGA Number">PDGA Number: </label>
+      <input type="number" id="pdgaNumber" placeholder="PDGA Number" value=""/>
+    <br>
+      <label for="Phone Number">Phone Number: </label>
+      <input type="number" id="phoneNumber" placeholder="999-999-9999" value=""/>
+    <br>
+      <label for="Email">PDGA Number: </label>
+      <input type="text" id="email" placeholder="someone@something.com" value=""/>
+    <br>
+  
+  </div>
+  </table>
+  
+  <table>
+    <thead>
+      <tr>
+        <th class="center">Stamp Type</th>
+      </tr>
+    </thead>
+    <div class="center" style="word-spacing: 20px;">
+      <input type="radio" name="stampType" id="basicStamp" value="Basic Stamp" checked=true/>
+      <label for="basicStamp">Basic Stamp $35</label>
+      <br>
+      <input type="radio" name="stampType" id="advancedStamp" value="Advanced Stamp requires attachment"/>
+      <label for="advancedStamp">Advanced Stamp $45</label>
+      <br>
+      <input type="radio" name="stampType" id="expertStamp" value="Expert Stamp requires attachment"/>
+      <label for="expertStamp">Expert Stamp $50+</label>
+      <br>
+    </div>
+  </table>
+  
+  <table>
+    <thead>
+      <tr>
+        <th class="center">Extras</th>
+      </tr>
+    </thead>
+    <div class="center" style="word-spacing: 20px;">
+      <label for="inkColor">Ink Color</label>
+      <input type="text" name="inkColor" id="inkColor" placeholder="black" value=""/>
+      <br>
+      <label for="comments">Additional Comments</label><br>
+      <textarea
+        name="comments" id="comments" rows=5 style="width: 80%;"
+        placeholder="Additional Comments to help us create the perfect stamp for your game"
+      />
+      <br>
+      <br>
+      <p style="word-spacing: normal">
+        Submitting a response will prompt you to send us an email using your devices default mail
+        app. Allow the application to open and verify all the information in the email is correct,
+        as well as include any picture attachments.
+  
+        Someone will be in touch with you as soon as we have reviewed your order.
+      </p>
+      <button class="button" onClick="submit()" style="background: #3CAEA3;" type="button">Submit</button>
+    </div>
+  </table>
+  
+  
+  
+  <div class="center">
+    <img src="../assets/images/scroll_right.png" alt="" style="max-width: 40px;">
+  </div>
+  </body>
+  
+  <script>
+  function submit() {
+    var name = document.getElementById("fullName").value;
+    var pdgaNumber = document.getElementById("pdgaNumber").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var email = document.getElementById("email").value;
+  
+    var inkColor = document.getElementById("inkColor").value;
+    var comments = document.getElementById("comments").value;
+  
+    var stampRadio = document.getElementsByName("stampType");
+    for(i = 0; i < stampRadio.length; i++) {
+        if(stampRadio[i].checked)
+        stampType = stampRadio[i].value;
+    }
+  
+    info = {
+      "Name": name,
+      "PDGA Number": pdgaNumber,
+      "Phone Number": phoneNumber,
+      "Email": email,
+      "Type of Stamp": stampType,
+      "Ink Color": inkColor,
+      "Additional Comments": comments
+    };
+  
+    if (name.length == 0 || pdgaNumber.length == 0 || phoneNumber.length == 0 || email.length == 0){
+        alert("All basic information is required.")
+    }
+    else if (confirm("You will now be redirected to send an email for your order. Okay?")){
+        resp = "Dear Nova Discs Stamps,\n" +
+                "I would like to purchase a stamp with the following information";
+        for (const [key, value] of Object.entries(info)){
+            resp = resp + "\n" + key + ": " + value
+        }
+        window.location = "mailto:novadiscsstamps@gmail.com?subject=Putting League Results&body=" + resp
+    }
+  }
+  </script>
+  
+  */
+  {
+    "id": "jVhRC12J",
+    "block": "[[[1,\"\\n\"],[10,\"style\"],[14,\"media\",\"screen\"],[12],[1,\"\\n  label {\\n    font-weight: bold;\\n    word-spacing: normal;\\n    padding-right:10px;\\n  }\\n\"],[13],[1,\"\\n\\n\"],[10,\"body\"],[12],[1,\"\\n\"],[10,\"table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"tr\"],[12],[1,\"\\n      \"],[10,\"th\"],[14,0,\"center\"],[12],[1,\"Stamp Order Form - Basic Info\"],[13],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,0],[14,0,\"center\"],[14,5,\"word-spacing: 20px;\"],[12],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"fullName\"],[12],[1,\"Full Name: \"],[13],[1,\"\\n    \"],[10,\"input\"],[14,1,\"fullName\"],[14,\"placeholder\",\"Name\"],[14,4,\"text\"],[12],[13],[1,\"\\n  \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"PDGA Number\"],[12],[1,\"PDGA Number: \"],[13],[1,\"\\n    \"],[10,\"input\"],[14,1,\"pdgaNumber\"],[14,\"placeholder\",\"PDGA Number\"],[14,2,\"\"],[14,4,\"number\"],[12],[13],[1,\"\\n  \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"Phone Number\"],[12],[1,\"Phone Number: \"],[13],[1,\"\\n    \"],[10,\"input\"],[14,1,\"phoneNumber\"],[14,\"placeholder\",\"999-999-9999\"],[14,2,\"\"],[14,4,\"number\"],[12],[13],[1,\"\\n  \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"Email\"],[12],[1,\"PDGA Number: \"],[13],[1,\"\\n    \"],[10,\"input\"],[14,1,\"email\"],[14,\"placeholder\",\"someone@something.com\"],[14,2,\"\"],[14,4,\"text\"],[12],[13],[1,\"\\n  \"],[10,\"br\"],[12],[13],[1,\"\\n\\n\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[10,\"table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"tr\"],[12],[1,\"\\n      \"],[10,\"th\"],[14,0,\"center\"],[12],[1,\"Stamp Type\"],[13],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,0],[14,0,\"center\"],[14,5,\"word-spacing: 20px;\"],[12],[1,\"\\n    \"],[10,\"input\"],[14,3,\"stampType\"],[14,1,\"basicStamp\"],[14,2,\"Basic Stamp\"],[14,\"checked\",\"true\"],[14,4,\"radio\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"basicStamp\"],[12],[1,\"Basic Stamp $35\"],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"input\"],[14,3,\"stampType\"],[14,1,\"advancedStamp\"],[14,2,\"Advanced Stamp requires attachment\"],[14,4,\"radio\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"advancedStamp\"],[12],[1,\"Advanced Stamp $45\"],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"input\"],[14,3,\"stampType\"],[14,1,\"expertStamp\"],[14,2,\"Expert Stamp requires attachment\"],[14,4,\"radio\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"expertStamp\"],[12],[1,\"Expert Stamp $50+\"],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[10,\"table\"],[12],[1,\"\\n  \"],[10,\"thead\"],[12],[1,\"\\n    \"],[10,\"tr\"],[12],[1,\"\\n      \"],[10,\"th\"],[14,0,\"center\"],[12],[1,\"Extras\"],[13],[1,\"\\n    \"],[13],[1,\"\\n  \"],[13],[1,\"\\n  \"],[10,0],[14,0,\"center\"],[14,5,\"word-spacing: 20px;\"],[12],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"inkColor\"],[12],[1,\"Ink Color\"],[13],[1,\"\\n    \"],[10,\"input\"],[14,3,\"inkColor\"],[14,1,\"inkColor\"],[14,\"placeholder\",\"black\"],[14,2,\"\"],[14,4,\"text\"],[12],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"label\"],[14,\"for\",\"comments\"],[12],[1,\"Additional Comments\"],[13],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"textarea\"],[14,3,\"comments\"],[14,1,\"comments\"],[14,\"rows\",\"5\"],[14,5,\"width: 80%;\"],[14,\"placeholder\",\"Additional Comments to help us create the perfect stamp for your game\"],[12],[13],[1,\"    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,\"br\"],[12],[13],[1,\"\\n    \"],[10,2],[14,5,\"word-spacing: normal\"],[12],[1,\"\\n      Submitting a response will prompt you to send us an email using your devices default mail\\n      app. Allow the application to open and verify all the information in the email is correct,\\n      as well as include any picture attachments.\\n\\n      Someone will be in touch with you as soon as we have reviewed your order.\\n    \"],[13],[1,\"\\n    \"],[10,\"button\"],[14,0,\"button\"],[14,\"onClick\",\"submit()\"],[14,5,\"background: #3CAEA3;\"],[14,4,\"button\"],[12],[1,\"Submit\"],[13],[1,\"\\n  \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,0],[14,0,\"center\"],[12],[1,\"\\n  \"],[10,\"img\"],[14,\"src\",\"../assets/images/scroll_right.png\"],[14,\"alt\",\"\"],[14,5,\"max-width: 40px;\"],[12],[13],[1,\"\\n\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction submit() {\\n  var name = document.getElementById(\\\"fullName\\\").value;\\n  var pdgaNumber = document.getElementById(\\\"pdgaNumber\\\").value;\\n  var phoneNumber = document.getElementById(\\\"phoneNumber\\\").value;\\n  var email = document.getElementById(\\\"email\\\").value;\\n\\n  var inkColor = document.getElementById(\\\"inkColor\\\").value;\\n  var comments = document.getElementById(\\\"comments\\\").value;\\n\\n  var stampRadio = document.getElementsByName(\\\"stampType\\\");\\n  for(i = 0; i < stampRadio.length; i++) {\\n      if(stampRadio[i].checked)\\n      stampType = stampRadio[i].value;\\n  }\\n\\n  info = {\\n    \\\"Name\\\": name,\\n    \\\"PDGA Number\\\": pdgaNumber,\\n    \\\"Phone Number\\\": phoneNumber,\\n    \\\"Email\\\": email,\\n    \\\"Type of Stamp\\\": stampType,\\n    \\\"Ink Color\\\": inkColor,\\n    \\\"Additional Comments\\\": comments\\n  };\\n\\n  if (name.length == 0 || pdgaNumber.length == 0 || phoneNumber.length == 0 || email.length == 0){\\n      alert(\\\"All basic information is required.\\\")\\n  }\\n  else if (confirm(\\\"You will now be redirected to send an email for your order. Okay?\\\")){\\n      resp = \\\"Dear Nova Discs Stamps,\\\\n\\\" +\\n              \\\"I would like to purchase a stamp with the following information\\\";\\n      for (const [key, value] of Object.entries(info)){\\n          resp = resp + \\\"\\\\n\\\" + key + \\\": \\\" + value\\n      }\\n      window.location = \\\"mailto:novadiscsstamps@gmail.com?subject=Putting League Results&body=\\\" + resp\\n  }\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[]]",
+    "moduleName": "novadiscs/components/stamps_form.hbs",
     "isStrictMode": false
   });
 
@@ -768,9 +943,10 @@
     this.route('scorecard');
     this.route('players');
     this.route('standings');
+    this.route('stamps');
   });
 });
-;define("novadiscs/routes/scientists", ["exports", "@ember/routing/route"], function (_exports, _route) {
+;define("novadiscs/routes/stamps", ["exports", "@ember/routing/route"], function (_exports, _route) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -779,14 +955,9 @@
   _exports.default = void 0;
   0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
 
-  class ScientistsRoute extends _route.default {
-    model() {
-      return ['Marie Curie', 'Mae Jemison', 'Albert Hofmann'];
-    }
+  class StampsRoute extends _route.default {}
 
-  }
-
-  _exports.default = ScientistsRoute;
+  _exports.default = StampsRoute;
 });
 ;define("novadiscs/routes/standings", ["exports", "@ember/routing/route"], function (_exports, _route) {
   "use strict";
@@ -993,6 +1164,24 @@
 
   _exports.default = _default;
 });
+;define("novadiscs/templates/stamps", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
+
+  var _default = (0, _templateFactory.createTemplateFactory)({
+    "id": "J8JAFIGs",
+    "block": "[[[1,[28,[35,0],[\"Custom Stamps\"],null]],[1,\"\\n\"],[3,\" <Stamps/> \"],[1,\"\\n\"],[8,[39,1],null,null,null],[1,\"\\n\"]],[],false,[\"page-title\",\"stamps-form\"]]",
+    "moduleName": "novadiscs/templates/stamps.hbs",
+    "isStrictMode": false
+  });
+
+  _exports.default = _default;
+});
 ;define("novadiscs/templates/standings", ["exports", "@ember/template-factory"], function (_exports, _templateFactory) {
   "use strict";
 
@@ -1090,7 +1279,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+cb4cfa3f"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+322db5a5"});
           }
         
 //# sourceMappingURL=novadiscs.map

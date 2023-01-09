@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('scorecard');
   this.route('players');
   this.route('standings');
+  this.route('stamps');
 });

@@ -310,7 +310,7 @@ input[type='checkbox'] {
     border:2px solid #555;
 }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number], input[type=tel], input[type=radio] {
   padding: 10px;
   margin: 10px 0;
   border-radius: 10px;

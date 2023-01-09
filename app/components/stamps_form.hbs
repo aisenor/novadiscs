@@ -1,0 +1,126 @@
+
+<style media="screen">
+  label {
+    font-weight: bold;
+    word-spacing: normal;
+    padding-right:10px;
+  }
+</style>
+
+<body>
+<table>
+  <thead>
+    <tr>
+      <th class="center">Stamp Order Form - Basic Info</th>
+    </tr>
+  </thead>
+  <div class="center" style="word-spacing: 20px;">
+    <label for="fullName">Full Name: </label>
+    <input type="text" id="fullName" placeholder="Name"/>
+  <br>
+    <label for="PDGA Number">PDGA Number: </label>
+    <input type="number" id="pdgaNumber" placeholder="PDGA Number" value=""/>
+  <br>
+    <label for="Phone Number">Phone Number: </label>
+    <input type="number" id="phoneNumber" placeholder="999-999-9999" value=""/>
+  <br>
+    <label for="Email">PDGA Number: </label>
+    <input type="text" id="email" placeholder="someone@something.com" value=""/>
+  <br>
+
+</div>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th class="center">Stamp Type</th>
+    </tr>
+  </thead>
+  <div class="center" style="word-spacing: 20px;">
+    <input type="radio" name="stampType" id="basicStamp" value="Basic Stamp" checked=true/>
+    <label for="basicStamp">Basic Stamp $35</label>
+    <br>
+    <input type="radio" name="stampType" id="advancedStamp" value="Advanced Stamp requires attachment"/>
+    <label for="advancedStamp">Advanced Stamp $45</label>
+    <br>
+    <input type="radio" name="stampType" id="expertStamp" value="Expert Stamp requires attachment"/>
+    <label for="expertStamp">Expert Stamp $50+</label>
+    <br>
+  </div>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th class="center">Extras</th>
+    </tr>
+  </thead>
+  <div class="center" style="word-spacing: 20px;">
+    <label for="inkColor">Ink Color</label>
+    <input type="text" name="inkColor" id="inkColor" placeholder="black" value=""/>
+    <br>
+    <label for="comments">Additional Comments</label><br>
+    <textarea
+      name="comments" id="comments" rows=5 style="width: 80%;"
+      placeholder="Additional Comments to help us create the perfect stamp for your game"
+    />
+    <br>
+    <br>
+    <p style="word-spacing: normal">
+      Submitting a response will prompt you to send us an email using your devices default mail
+      app. Allow the application to open and verify all the information in the email is correct,
+      as well as include any picture attachments.
+
+      Someone will be in touch with you as soon as we have reviewed your order.
+    </p>
+    <button class="button" onClick="submit()" style="background: #3CAEA3;" type="button">Submit</button>
+  </div>
+</table>
+
+
+
+<div class="center">
+  <img src="../assets/images/scroll_right.png" alt="" style="max-width: 40px;">
+</div>
+</body>
+
+<script>
+function submit() {
+  var name = document.getElementById("fullName").value;
+  var pdgaNumber = document.getElementById("pdgaNumber").value;
+  var phoneNumber = document.getElementById("phoneNumber").value;
+  var email = document.getElementById("email").value;
+
+  var inkColor = document.getElementById("inkColor").value;
+  var comments = document.getElementById("comments").value;
+
+  var stampRadio = document.getElementsByName("stampType");
+  for(i = 0; i < stampRadio.length; i++) {
+      if(stampRadio[i].checked)
+      stampType = stampRadio[i].value;
+  }
+
+  info = {
+    "Name": name,
+    "PDGA Number": pdgaNumber,
+    "Phone Number": phoneNumber,
+    "Email": email,
+    "Type of Stamp": stampType,
+    "Ink Color": inkColor,
+    "Additional Comments": comments
+  };
+
+  if (name.length == 0 || pdgaNumber.length == 0 || phoneNumber.length == 0 || email.length == 0){
+      alert("All basic information is required.")
+  }
+  else if (confirm("You will now be redirected to send an email for your order. Okay?")){
+      resp = "Dear Nova Discs Stamps,\n" +
+              "I would like to purchase a stamp with the following information";
+      for (const [key, value] of Object.entries(info)){
+          resp = resp + "\n" + key + ": " + value
+      }
+      window.location = "mailto:novadiscsstamps@gmail.com?subject=Putting League Results&body=" + resp
+  }
+}
+</script>
