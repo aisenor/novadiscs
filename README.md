@@ -59,3 +59,4 @@ Specify what it takes to deploy your app.
 For local testing use `firebase emulators:start`
 After every code change you must run `npm run build` to see changes in the emulator
 To deploy use `firebase deploy`
+Run `curl -X PURGE https://nova-discs.web.app` If site appears unresponsive to change
