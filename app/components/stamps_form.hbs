@@ -59,19 +59,21 @@
   <div class="center" style="word-spacing: 20px;">
     <label for="inkColor">Preferred Ink Color</label>
     <input type="text" name="inkColor" id="inkColor" placeholder="black" value=""/>
-    <br>
+    <p style="word-spacing: normal;">
+      Currenlty the only ink we are able to offer is black,
+      any other colors can be purchased from your local craft store
+    </p>
 
-    <div style="justify-content: center; display: flex; gap: 10px; padding: 10px;">
+    <div style="justify-content: center; display: flex; gap: 10px; padding-bottom: 10px;">
       <input type="checkbox" name="reuse" id="reuse"/>
       <label for="reuse" style="padding-top: 5px">No reuse; $5</label>
     </div>
-
 
     <p style="word-spacing: normal;">
       If you are providing creative direction on an image that you don't wish to see anyone else with
       there is an extra fee of $5 as all creative work is the property of the designer and Nova Discs
     </p>
-    <br>
+
     <label for="comments">Additional Comments</label><br>
     <textarea
       name="comments" id="comments" rows=5 style="width: 80%;"
@@ -99,6 +101,10 @@ function submit() {
   var email = document.getElementById("email").value;
 
   var inkColor = document.getElementById("inkColor").value;
+  if(inkColor.length= == 0){
+    inkColor = "Black"
+  }
+
   var comments = document.getElementById("comments").value;
 
   var reuseCheckBoxes = document.getElementsByName("reuse");
