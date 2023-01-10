@@ -58,11 +58,11 @@
   </thead>
   <div class="center">
     <div style="justify-content: center; display: flex; gap: 10px; padding-bottom: 10px;">
-      <input type="checkbox" name="reuse" id="reuse"/>
-      <label for="reuse" style="padding-top: 5px">Include Stazon Black ink pad</label>
+      <input type="checkbox" name="includeInk" id="includeInk"/>
+      <label for="includeInk" style="padding-top: 5px">Include Stazon Black ink pad</label>
     </div>
     <div class="center">
-      <img src="../assets/images/stazon.png" alt="stazon ink img" style="max-width: 200px;">
+      <img src="../assets/images/stamps/stazon.png" alt="stazon ink img" style="max-width: 200px;">
     </div>
     <p>
       We are currenlty only able to offer black ink pads.
@@ -86,7 +86,7 @@
     />
     <br>
     <br>
-    <p style="word-spacing: normal">
+    <p>
       Submitting a response will prompt you to send us an email using your devices default mail
       app. Allow the application to open and verify all the information in the email is correct,
       as well as include any picture attachments.
@@ -105,9 +105,12 @@ function submit() {
   var phoneNumber = document.getElementById("phoneNumber").value;
   var email = document.getElementById("email").value;
 
-  var inkColor = document.getElementById("inkColor").value;
-  if(inkColor.length == 0){
-    inkColor = "Black"
+  var inkColorBoxes = document.getElementsByName("includeInk");
+  for(i = 0; i < inkColorBoxes.length; i++) {
+      if(inkColorBoxes[i].checked)
+      includeInk = true;
+      else
+      includeInk = false;
   }
 
   var comments = document.getElementById("comments").value;
@@ -132,8 +135,8 @@ function submit() {
     "Phone Number": phoneNumber,
     "Email": email,
     "Type of Stamp": stampType,
-    "Ink Color": inkColor,
     "Additional Comments": comments,
+    "Include ink": includeInk,
     "Reuse fee": reuseChecked
   };
 
