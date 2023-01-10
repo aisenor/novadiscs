@@ -18,13 +18,13 @@
     <label for="fullName">Full Name: </label>
     <input type="text" id="fullName" placeholder="Name"/>
   <br>
-    <label for="PDGA Number">PDGA Number: </label>
+    <label for="pdgaNumber">PDGA Number: </label>
     <input type="number" id="pdgaNumber" placeholder="PDGA Number" value=""/>
   <br>
-    <label for="Phone Number">Phone Number: </label>
+    <label for="phoneNumber">Phone Number: </label>
     <input type="number" id="phoneNumber" placeholder="999-999-9999" value=""/>
   <br>
-    <label for="Email">Email: </label>
+    <label for="email">Email: </label>
     <input type="text" id="email" placeholder="someone@something.com" value=""/>
   <br>
 
@@ -101,10 +101,10 @@ function submit() {
   var email = document.getElementById("email").value;
 
   var inkColor = document.getElementById("inkColor").value;
-  if(inkColor.length= == 0){
+  if(inkColor.length == 0){
     inkColor = "Black"
   }
-
+  alert(inkColor)
   var comments = document.getElementById("comments").value;
 
   var reuseCheckBoxes = document.getElementsByName("reuse");
