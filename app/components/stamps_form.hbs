@@ -56,12 +56,17 @@
       <th class="center">Extras</th>
     </tr>
   </thead>
-  <div class="center" style="word-spacing: 20px;">
-    <label for="inkColor">Preferred Ink Color</label>
-    <input type="text" name="inkColor" id="inkColor" placeholder="Black" value=""/>
-    <p style="word-spacing: normal;">
-      Currenlty the only ink we are able to offer is black,
-      any other colors can be purchased from your local craft store
+  <div class="center">
+    <div style="justify-content: center; display: flex; gap: 10px; padding-bottom: 10px;">
+      <input type="checkbox" name="reuse" id="reuse"/>
+      <label for="reuse" style="padding-top: 5px">Include Stazon Black ink pad</label>
+    </div>
+    <div class="center">
+      <img src="../assets/images/stazon.png" alt="stazon ink img" style="max-width: 200px;">
+    </div>
+    <p>
+      We are currenlty only able to offer black ink pads.
+      Other colors can be purchased from your local craft store.
     </p>
 
     <div style="justify-content: center; display: flex; gap: 10px; padding-bottom: 10px;">
@@ -69,7 +74,7 @@
       <label for="reuse" style="padding-top: 5px">No reuse; $5</label>
     </div>
 
-    <p style="word-spacing: normal;">
+    <p>
       If you are providing creative direction on an image that you don't wish to see anyone else with
       there is an extra fee of $5 as all creative work is the property of the designer and Nova Discs
     </p>
