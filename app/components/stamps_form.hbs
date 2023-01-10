@@ -24,7 +24,7 @@
     <label for="Phone Number">Phone Number: </label>
     <input type="number" id="phoneNumber" placeholder="999-999-9999" value=""/>
   <br>
-    <label for="Email">PDGA Number: </label>
+    <label for="Email">Email: </label>
     <input type="text" id="email" placeholder="someone@something.com" value=""/>
   <br>
 
@@ -60,6 +60,13 @@
     <label for="inkColor">Ink Color</label>
     <input type="text" name="inkColor" id="inkColor" placeholder="black" value=""/>
     <br>
+    <input type="checkbox" name="reuse" id="reuse"/>
+    <label for="reuse" style="padding-bottom: 100px;">No reuse; $5</label>
+    <p style="word-spacing: normal;">
+      If you are providing creative direction on an image that you don't wish to see anyone else with
+      there is an extra fee of $5 as all creative work is the property of the design and Nova Discs
+    </p>
+    <br>
     <label for="comments">Additional Comments</label><br>
     <textarea
       name="comments" id="comments" rows=5 style="width: 80%;"
@@ -89,6 +96,14 @@ function submit() {
   var inkColor = document.getElementById("inkColor").value;
   var comments = document.getElementById("comments").value;
 
+  var reuseCheckBoxes = document.getElementsByName("reuse");
+  for(i = 0; i < reuseCheckBoxes.length; i++) {
+      if(reuseCheckBoxes[i].checked)
+      reuseChecked = true;
+      else
+      reuseChecked = false;
+  }
+
   var stampRadio = document.getElementsByName("stampType");
   for(i = 0; i < stampRadio.length; i++) {
       if(stampRadio[i].checked)
@@ -102,7 +117,8 @@ function submit() {
     "Email": email,
     "Type of Stamp": stampType,
     "Ink Color": inkColor,
-    "Additional Comments": comments
+    "Additional Comments": comments,
+    "Reuse fee": reuseChecked
   };
 
   if (name.length == 0 || pdgaNumber.length == 0 || phoneNumber.length == 0 || email.length == 0){
