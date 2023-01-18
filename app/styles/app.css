@@ -389,3 +389,12 @@ input[type=text], input[type=number], input[type=tel], input[type=radio] {
   transition: margin-left .5s;
   padding: 16px;
 }
+
+
+div.settings {
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:5px;
+}
+div.settings label       { text-align:right; }
+div.settings label:after { content: ":"; }
