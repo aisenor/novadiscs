@@ -132,13 +132,13 @@ function submit() {
 
   info = {
     "Name": name,
+    "Email": email,
     "PDGA Number": pdgaNumber,
     "Phone Number": phoneNumber,
-    "Email": email,
     "Type of Stamp": stampType,
-    "Additional Comments": comments,
     "Include ink": includeInk,
-    "Reuse fee": reuseChecked
+    "Reuse fee": reuseChecked,
+    "Additional Comments": comments
   };
 
   if (name.length == 0 || pdgaNumber.length == 0 || phoneNumber.length == 0 || email.length == 0){
@@ -150,6 +150,9 @@ function submit() {
       for (const [key, value] of Object.entries(info)){
           resp = resp + "\n" + key + ": " + value
       }
+      resp = resp + "\n\nIf the reuse fee is not applied I understand that the design produced is " +
+            "the property of Nova Discs and Amanda Isenor and shall therefore be at their " +
+            "discretion to reuse on other products or promotions."
       ebody = encodeURIComponent(resp);
       window.location = "mailto:novadiscsstamps@gmail.com?subject=Custom Stamp Orders&body=" + ebody
   }
