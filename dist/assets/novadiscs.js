@@ -68,14 +68,14 @@
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
     <div class="jumbo">
-    <div class="right tomster"></div>
+    <!-- <div class="right tomster"></div> -->
     {{yield}}
   </div>
   
   */
   {
-    "id": "k5fnhD/X",
-    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n  \"],[10,0],[14,0,\"right tomster\"],[12],[13],[1,\"\\n  \"],[18,1,null],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"&default\"],false,[\"yield\"]]",
+    "id": "vx3ts9r5",
+    "block": "[[[10,0],[14,0,\"jumbo\"],[12],[1,\"\\n  \"],[3,\" <div class=\\\"right tomster\\\"></div> \"],[1,\"\\n  \"],[18,1,null],[1,\"\\n\"],[13],[1,\"\\n\"]],[\"&default\"],false,[\"yield\"]]",
     "moduleName": "novadiscs/components/jumbo.hbs",
     "isStrictMode": false
   });
@@ -1362,7 +1362,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+67788bf8"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+9f4db60b"});
           }
         
 //# sourceMappingURL=novadiscs.map
