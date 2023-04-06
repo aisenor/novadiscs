@@ -161,7 +161,7 @@
   body {margin:0;font-family:Arial}
   
   .topnav .menubuttons {
-    float: left;
+    float: right;
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -173,6 +173,10 @@
   .topnav {
     overflow: hidden;
     background-color: #20639B;
+  }
+  
+  .topnav :nth-child(2){
+    order: 1;
   }
   
   .topnav a {
@@ -226,9 +230,6 @@
         width: 66%;
         margin: auto;
     }
-  }
-  
-  @media screen and (max-width: 812px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -255,18 +256,12 @@
     <LinkTo @route="index" class="menu-index">
       <h1 style="font-style: italic;">NovaDiscs</h1>
     </LinkTo>
-    <!-- <a href="#home" class="active">NovaDiscs</a> -->
-    <!-- <LinkTo @route="scorecard" class="menu-contact">
-      Scorecard
-    </LinkTo>
   
-    <LinkTo @route="players" class="menu-contact">
-      Players
-    </LinkTo> -->
-    <a class="menubuttons" href="/scorecard">Putting League Scorecard</a>
-    <!-- <a class="menubuttons" href="/players">Players</a> -->
-    <a class="menubuttons" href="/standings">2023 Putting League Standings</a>
     <a class="menubuttons" href="/stamps">Custom Stamps</a>
+  
+    <!-- <a class="menubuttons" href="/players">Players</a> -->
+    <a class="menubuttons" href="/scorecard">Putting League Scorecard</a>
+    <a class="menubuttons" href="/standings">2023 Putting League Standings</a>
   
     <a href="javascript:void(0);" style="font-size:1.8em;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
@@ -286,8 +281,8 @@
   
   */
   {
-    "id": "VrZzpK8g",
-    "block": "[[[1,\"\\n\"],[10,\"meta\"],[14,3,\"viewport\"],[14,\"content\",\"width=device-width, initial-scale=1\"],[12],[13],[1,\"\\n\"],[10,\"link\"],[14,\"rel\",\"stylesheet\"],[14,6,\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"],[12],[13],[1,\"\\n\\n\"],[10,\"style\"],[12],[1,\"\\nbody {margin:0;font-family:Arial}\\n\\n.topnav .menubuttons {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 28px 16px 25px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav {\\n  overflow: hidden;\\n  background-color: #20639B;\\n}\\n\\n.topnav a {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 14px 16px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav .icon {\\n  display: none;\\n}\\n\\n.dropdown {\\n  float: left;\\n  overflow: hidden;\\n}\\n\\n.dropdown .dropbtn {\\n  font-size: 17px;\\n  border: none;\\n  outline: none;\\n  color: white;\\n  padding: 14px 16px;\\n  background-color: inherit;\\n  font-family: inherit;\\n  margin: 0;\\n}\\n\\n@media screen and (max-width: 812px) {\\n  .topnav a:not(:first-child), .dropdown .dropbtn {\\n    display: none;\\n  }\\n  .topnav a.icon {\\n    float: right;\\n    display: block;\\n  }\\n  .topnav .menubuttons {\\n    float: left;\\n    display: block;\\n    color: #f2f2f2;\\n    text-align: center;\\n    padding: 15px 16px 15px;\\n    text-decoration: none;\\n    font-size: 17px;\\n  }\\n  .finalButtons {\\n      width: 66%;\\n      margin: auto;\\n  }\\n}\\n\\n@media screen and (max-width: 812px) {\\n  .topnav.responsive {position: relative;}\\n  .topnav.responsive .icon {\\n    position: absolute;\\n    right: 0;\\n    top: 0;\\n  }\\n  .topnav.responsive a {\\n    float: none;\\n    display: block;\\n    text-align: left;\\n  }\\n  .topnav.responsive .dropdown {float: none;}\\n  .topnav.responsive .dropdown .dropbtn {\\n    display: block;\\n    width: 100%;\\n    text-align: left;\\n  }\\n}\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,0],[14,0,\"topnav\"],[14,1,\"myTopnav\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[14,5,\"font-style: italic;\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n  \"],[3,\" <a href=\\\"#home\\\" class=\\\"active\\\">NovaDiscs</a> \"],[1,\"\\n  \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"menu-contact\\\">\\n    Scorecard\\n  </LinkTo>\\n\\n  <LinkTo @route=\\\"players\\\" class=\\\"menu-contact\\\">\\n    Players\\n  </LinkTo> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/scorecard\"],[12],[1,\"Putting League Scorecard\"],[13],[1,\"\\n  \"],[3,\" <a class=\\\"menubuttons\\\" href=\\\"/players\\\">Players</a> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/standings\"],[12],[1,\"2023 Putting League Standings\"],[13],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/stamps\"],[12],[1,\"Custom Stamps\"],[13],[1,\"\\n\\n  \"],[10,3],[14,6,\"javascript:void(0);\"],[14,5,\"font-size:1.8em;\"],[14,0,\"icon\"],[14,\"onclick\",\"myFunction()\"],[12],[1,\"☰\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction myFunction() {\\n  var x = document.getElementById(\\\"myTopnav\\\");\\n  if (x.className === \\\"topnav\\\") {\\n    x.className += \\\" responsive\\\";\\n  } else {\\n    x.className = \\\"topnav\\\";\\n  }\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
+    "id": "He39sXc2",
+    "block": "[[[1,\"\\n\"],[10,\"meta\"],[14,3,\"viewport\"],[14,\"content\",\"width=device-width, initial-scale=1\"],[12],[13],[1,\"\\n\"],[10,\"link\"],[14,\"rel\",\"stylesheet\"],[14,6,\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"],[12],[13],[1,\"\\n\\n\"],[10,\"style\"],[12],[1,\"\\nbody {margin:0;font-family:Arial}\\n\\n.topnav .menubuttons {\\n  float: right;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 28px 16px 25px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav {\\n  overflow: hidden;\\n  background-color: #20639B;\\n}\\n\\n.topnav :nth-child(2){\\n  order: 1;\\n}\\n\\n.topnav a {\\n  float: left;\\n  display: block;\\n  color: #f2f2f2;\\n  text-align: center;\\n  padding: 14px 16px;\\n  text-decoration: none;\\n  font-size: 17px;\\n}\\n\\n.topnav .icon {\\n  display: none;\\n}\\n\\n.dropdown {\\n  float: left;\\n  overflow: hidden;\\n}\\n\\n.dropdown .dropbtn {\\n  font-size: 17px;\\n  border: none;\\n  outline: none;\\n  color: white;\\n  padding: 14px 16px;\\n  background-color: inherit;\\n  font-family: inherit;\\n  margin: 0;\\n}\\n\\n@media screen and (max-width: 812px) {\\n  .topnav a:not(:first-child), .dropdown .dropbtn {\\n    display: none;\\n  }\\n  .topnav a.icon {\\n    float: right;\\n    display: block;\\n  }\\n  .topnav .menubuttons {\\n    float: left;\\n    display: block;\\n    color: #f2f2f2;\\n    text-align: center;\\n    padding: 15px 16px 15px;\\n    text-decoration: none;\\n    font-size: 17px;\\n  }\\n  .finalButtons {\\n      width: 66%;\\n      margin: auto;\\n  }\\n  .topnav.responsive {position: relative;}\\n  .topnav.responsive .icon {\\n    position: absolute;\\n    right: 0;\\n    top: 0;\\n  }\\n  .topnav.responsive a {\\n    float: none;\\n    display: block;\\n    text-align: left;\\n  }\\n  .topnav.responsive .dropdown {float: none;}\\n  .topnav.responsive .dropdown .dropbtn {\\n    display: block;\\n    width: 100%;\\n    text-align: left;\\n  }\\n}\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,0],[14,0,\"topnav\"],[14,1,\"myTopnav\"],[12],[1,\"\\n  \"],[8,[39,0],[[24,0,\"menu-index\"]],[[\"@route\"],[\"index\"]],[[\"default\"],[[[[1,\"\\n    \"],[10,\"h1\"],[14,5,\"font-style: italic;\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"]],[]]]]],[1,\"\\n\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/stamps\"],[12],[1,\"Custom Stamps\"],[13],[1,\"\\n\\n  \"],[3,\" <a class=\\\"menubuttons\\\" href=\\\"/players\\\">Players</a> \"],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/scorecard\"],[12],[1,\"Putting League Scorecard\"],[13],[1,\"\\n  \"],[10,3],[14,0,\"menubuttons\"],[14,6,\"/standings\"],[12],[1,\"2023 Putting League Standings\"],[13],[1,\"\\n\\n  \"],[10,3],[14,6,\"javascript:void(0);\"],[14,5,\"font-size:1.8em;\"],[14,0,\"icon\"],[14,\"onclick\",\"myFunction()\"],[12],[1,\"☰\"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\\n\"],[10,\"script\"],[12],[1,\"\\nfunction myFunction() {\\n  var x = document.getElementById(\\\"myTopnav\\\");\\n  if (x.className === \\\"topnav\\\") {\\n    x.className += \\\" responsive\\\";\\n  } else {\\n    x.className = \\\"topnav\\\";\\n  }\\n}\\n\"],[13],[1,\"\\n\"]],[],false,[\"link-to\"]]",
     "moduleName": "novadiscs/components/nav-bar2.hbs",
     "isStrictMode": false
   });
@@ -1203,8 +1198,8 @@
   0; //eaimeta@70e063a35619d71f0,"@ember/template-factory"eaimeta@70e063a35619d71f
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "DYWlop1y",
-    "block": "[[[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n  \"],[10,\"h2\"],[12],[1,\"NovaDiscs\"],[13],[1,\"\\n  \"],[10,\"h3\"],[12],[1,\"Thank you to everyone who attended our 2023 Winter Putting League and congratualtions to our winners!\"],[13],[1,\"\\n\"],[3,\" <p></p>\\n  <p>This site is currently a beta. Nothing is guarunteed. Leaving the site may cause you to lose any results in the scorecard.</p>\\n  <p>When submitting a scorecard you will be prompted to send an email. Please do not change the message body or 'To' field</p>\\n  <p>If you are unable to submit a scorecard, take a screenshot and send it to Chris or email it to novadiscsscorecards@gmail.com</p> \"],[1,\"\\n\"],[3,\"\\n  <br>\\n\\n   <p>\\n    <a href=\\\"https://docs.google.com/forms/d/e/1FAIpQLSddxtYoe2ZTw1mIH1KPpnj9lWQ3qNYUCukqGS10rCWLybCt7w/viewform\\\">Click Here</a> to register for the league\\n    <br> Cost is $10 per night per person, the league runs Thursdays at 9pm, starting January 5th for 6 weeks.\\n  </p>\\n\"],[1,\"\\n  \"],[10,\"br\"],[12],[13],[1,\"\\n\\n  \"],[10,2],[12],[1,\" \"],[10,3],[14,6,\"mailto:novadiscs@gmail.com\"],[12],[1,\"Contact Us\"],[13],[1,\" if you have any other questions \"],[13],[1,\"\\n\\n  \"],[10,0],[14,0,\"finalButtons center\"],[12],[1,\"\\n    \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"button\\\" style=\\\"background: #3CAEA3; margin: 5px 10px;\\\">Scorecard</LinkTo> \"],[1,\"\\n    \"],[3,\" <LinkTo @route=\\\"players\\\" class=\\\"button\\\" style=\\\"background: #3CAEA3; margin: 5px 10px;\\\">Find your Player ID</LinkTo> \"],[1,\"\\n    \"],[3,\" <LinkTo @route=\\\"standings\\\" class=\\\"button\\\" style=\\\"background: #3CAEA3; margin: 5px 10px;\\\">Standings</LinkTo> \"],[1,\"\\n    \"],[8,[39,1],[[24,0,\"button\"],[24,5,\"background: #3CAEA3; margin: 5px 10px;\"]],[[\"@route\"],[\"stamps\"]],[[\"default\"],[[[[1,\"Custom Stamps\"]],[]]]]],[1,\"\\n  \"],[13],[1,\"\\n\"]],[]]]]],[1,\"\\n\\n\"],[10,\"footer\"],[12],[13],[1,\"\\n\"]],[],false,[\"jumbo\",\"link-to\"]]",
+    "id": "55RPzLck",
+    "block": "[[[10,\"footer\"],[12],[13],[1,\"\\n\\n\"],[8,[39,0],null,null,[[\"default\"],[[[[1,\"\\n  \"],[10,\"h2\"],[12],[1,\"Putting League and Custom Stamps\"],[13],[1,\"\\n  \"],[10,\"h3\"],[12],[1,\"Thank you to everyone who attended our 2023 Winter Putting League and congratualtions to our winners!\"],[13],[1,\"\\n\"],[3,\" <p></p>\\n  <p>This site is currently a beta. Nothing is guarunteed. Leaving the site may cause you to lose any results in the scorecard.</p>\\n  <p>When submitting a scorecard you will be prompted to send an email. Please do not change the message body or 'To' field</p>\\n  <p>If you are unable to submit a scorecard, take a screenshot and send it to Chris or email it to novadiscsscorecards@gmail.com</p> \"],[1,\"\\n\"],[3,\"\\n  <br>\\n\\n   <p>\\n    <a href=\\\"https://docs.google.com/forms/d/e/1FAIpQLSddxtYoe2ZTw1mIH1KPpnj9lWQ3qNYUCukqGS10rCWLybCt7w/viewform\\\">Click Here</a> to register for the league\\n    <br> Cost is $10 per night per person, the league runs Thursdays at 9pm, starting January 5th for 6 weeks.\\n  </p>\\n\"],[1,\"\\n  \"],[10,\"br\"],[12],[13],[1,\"\\n\\n  \"],[10,2],[12],[1,\" \"],[10,3],[14,6,\"mailto:novadiscs@gmail.com\"],[12],[1,\"Contact Us\"],[13],[1,\" if you have any other questions \"],[13],[1,\"\\n\\n  \"],[10,0],[14,0,\"finalButtons center\"],[12],[1,\"\\n    \"],[3,\" <LinkTo @route=\\\"scorecard\\\" class=\\\"button\\\" style=\\\"background: #3CAEA3; margin: 5px 10px;\\\">Scorecard</LinkTo> \"],[1,\"\\n    \"],[3,\" <LinkTo @route=\\\"players\\\" class=\\\"button\\\" style=\\\"background: #3CAEA3; margin: 5px 10px;\\\">Find your Player ID</LinkTo> \"],[1,\"\\n    \"],[3,\" <LinkTo @route=\\\"standings\\\" class=\\\"button\\\" style=\\\"background: #3CAEA3; margin: 5px 10px;\\\">Standings</LinkTo> \"],[1,\"\\n    \"],[8,[39,1],[[24,0,\"button\"],[24,5,\"background: #3CAEA3; margin: 5px 10px;\"]],[[\"@route\"],[\"stamps\"]],[[\"default\"],[[[[1,\"Custom Stamps\"]],[]]]]],[1,\"\\n  \"],[13],[1,\"\\n\"]],[]]]]],[1,\"\\n\"]],[],false,[\"jumbo\",\"link-to\"]]",
     "moduleName": "novadiscs/templates/index.hbs",
     "isStrictMode": false
   });

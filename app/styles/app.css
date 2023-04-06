@@ -199,6 +199,10 @@ caption {
 
 .body {
   padding: 15px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh; */
 }
 /**
  * Similar to Jumbotron
@@ -268,10 +272,11 @@ caption {
 footer {
     background-image: url(../assets/images/Nova-Discs-Banner.png);
     background-size: cover;
-    position: bottom;
+    position: relative;
     overflow: hidden;
     height: 200px;
     width: 100%;
+    bottom: 0px;
 }
 
 
@@ -384,6 +389,15 @@ input[type=text], input[type=number], input[type=tel], input[type=radio] {
 }
 
 @media only screen and (max-width:600px) {
+  .jumbo h2 {
+    font-size: 2.3em;
+  }
+
+  .jumbo {
+    padding: 35px 15px;
+    /* padding-top: 35px; */
+  }
+
   footer {
       background-image: url(../assets/images/Nova-Discs-Banner.png);
       overflow: hidden;

@@ -6,7 +6,7 @@
 body {margin:0;font-family:Arial}
 
 .topnav .menubuttons {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -18,6 +18,10 @@ body {margin:0;font-family:Arial}
 .topnav {
   overflow: hidden;
   background-color: #20639B;
+}
+
+.topnav :nth-child(2){
+  order: 1;
 }
 
 .topnav a {
@@ -71,9 +75,6 @@ body {margin:0;font-family:Arial}
       width: 66%;
       margin: auto;
   }
-}
-
-@media screen and (max-width: 812px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -100,18 +101,12 @@ body {margin:0;font-family:Arial}
   <LinkTo @route="index" class="menu-index">
     <h1 style="font-style: italic;">NovaDiscs</h1>
   </LinkTo>
-  <!-- <a href="#home" class="active">NovaDiscs</a> -->
-  <!-- <LinkTo @route="scorecard" class="menu-contact">
-    Scorecard
-  </LinkTo>
 
-  <LinkTo @route="players" class="menu-contact">
-    Players
-  </LinkTo> -->
-  <a class="menubuttons" href="/scorecard">Putting League Scorecard</a>
-  <!-- <a class="menubuttons" href="/players">Players</a> -->
-  <a class="menubuttons" href="/standings">2023 Putting League Standings</a>
   <a class="menubuttons" href="/stamps">Custom Stamps</a>
+
+  <!-- <a class="menubuttons" href="/players">Players</a> -->
+  <a class="menubuttons" href="/scorecard">Putting League Scorecard</a>
+  <a class="menubuttons" href="/standings">2023 Putting League Standings</a>
 
   <a href="javascript:void(0);" style="font-size:1.8em;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
