@@ -1362,7 +1362,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+b6585dc5"});
+            require("novadiscs/app")["default"].create({"name":"novadiscs","version":"0.0.0+67788bf8"});
           }
         
 //# sourceMappingURL=novadiscs.map
