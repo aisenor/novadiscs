@@ -255,7 +255,7 @@ caption {
 }
 
 .tomster {
-  background: url(../assets/images/tomster-under-construction.png);
+  background: url(../assets/images/Nova-Discs-Banner.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 200px;
@@ -264,6 +264,16 @@ caption {
   position: relative;
   top: -25px;
 }
+
+footer {
+    background-image: url(../assets/images/Nova-Discs-Banner.png);
+    background-size: cover;
+    position: bottom;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
 
 .screen-reader{
   position: absolute;
@@ -374,6 +384,12 @@ input[type=text], input[type=number], input[type=tel], input[type=radio] {
 }
 
 @media only screen and (max-width:600px) {
+  footer {
+      background-image: url(../assets/images/Nova-Discs-Banner.png);
+      overflow: hidden;
+      height: 100px;
+      width: 100%;
+  }
 
   .scoreTable {
     display: block;
