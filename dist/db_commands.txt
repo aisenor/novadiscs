@@ -1,25 +1,29 @@
 /*TOP 3 SCORES - replace date */
-SELECT player_name, score
+SELECT player_name, score_week_1
 FROM scores
-JOIN players ON players.id = player_id
-WHERE DATE="YYYY-MM-DD"
-ORDER BY score DESC
+ORDER BY score_week_1 DESC
 LIMIT 3;
 
 /* Get the sum of everyones top 4 days */
-SELECT player_name, sum(score) AS "Best 4 Days"
-FROM (
-SELECT player_id, score
-FROM scores s
-WHERE (
-SELECT count(*)
-FROM scores sc
-WHERE sc.player_id = s.player_id AND sc.score >= s.score
-) <= 4
-) tmp
-JOIN players ON players.id = player_id
-GROUP BY player_id
-ORDER BY sum(score) DESC;
+WITH RankedScores AS (
+  SELECT
+    player_name,
+    score,
+    ROW_NUMBER() OVER (PARTITION BY player_name ORDER BY score DESC) AS rank
+  FROM
+    scores
+)
+SELECT
+  player_name,
+  SUM(score) AS "Best 4 Days"
+FROM
+  RankedScores
+WHERE
+  rank <= 4
+GROUP BY
+  player_name
+ORDER BY
+  "Best 4 Days" DESC;
 
 
 /* Get all player names that attended a day */
