@@ -6,9 +6,10 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [{
+    "redirects": [{
       "source": "**",
-      "destination": "/index.html"
+      "destination": "https://nova-discs-halifax.web.app",
+      "type": 301
     }]
   }
 }
